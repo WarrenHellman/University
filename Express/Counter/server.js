@@ -26,6 +26,16 @@ app.get('/', function(req, res) {
   res.render("index", { count: addOne(req)} );
 });
 
+app.post('/plustwo', function(req, res) {
+  addOne(req)
+  res.redirect('/')
+})
+
+app.post('/reset', function(req, res) {
+  reset(req);
+  res.redirect('/')
+})
+
 function addOne(req) {
   if (!req.session.count){
     req.session.count = 1;
@@ -35,7 +45,9 @@ function addOne(req) {
   return req.session.count;
 }
 
-
+function reset(req) {
+  req.session.destroy();
+}
 // tell the express app to listen on port 8000
 app.listen(8000, function() {
   console.log("listening on port 8000");
