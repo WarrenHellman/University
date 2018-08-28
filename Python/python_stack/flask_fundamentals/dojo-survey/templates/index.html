@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SIMPLE form exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <div class="container">
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="left">
+            <h4>Name:</h4>
+            <h4>Dojo Location:</h4>
+            <h4>Favorite Language</h4>
+            <h4>Comments:</h4>
+        </div>
+        <div class="right">
+            <form class="" action="/results" method="post">
+                <br>
+                <input type="text" name="name" placeholder="Enter name">
+                <br>
+                <br>
+                <select name="city">
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+                <br>
+                <br>
+                <select name="language">
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="JavaScript">Javascript</option>
+                </select>
+                <br>
+                <br>
+                <input name="comment" type="text" placeholder="Enter comment">
+                <br>
+                <br>
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

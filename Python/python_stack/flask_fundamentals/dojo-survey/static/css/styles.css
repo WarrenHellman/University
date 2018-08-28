@@ -1,0 +1,24 @@
+.container{
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+    padding: 20px;
+}
+.left {
+    display: inline-block;
+    background-color: aquamarine;
+    height: 300px;
+    width: 190px;
+    vertical-align: top;
+}
+.right {
+    display: inline-block;
+    vertical-align: top;
+    background-color: burlywood;
+    height: 300px;
+    width: 190px;
+}
+.wrapper {
+    display: inline-block;
+}

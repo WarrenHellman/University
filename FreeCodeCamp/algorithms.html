@@ -1,0 +1,196 @@
+
+<script>
+    // FrankenSplice
+    // function frankenSplice(arr1, arr2, n) {
+    //     // It's alive. It's alive!
+    //     var arr = arr2.slice(0, arr2.length);
+    //     var count = 0;
+    //     for (var i=0; i<arr1.length; i++){
+    //         arr.splice(n+count, 0, arr1[i])
+    //         count++;
+    //     }
+    //     console.log(arr);
+    //     console.log(arr1);
+        // console.log(arr2);
+
+    // }
+
+    // frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+    // function sumAll(arr) {
+    //     var sum = 0;
+    //     if (arr[1]>arr[0]){
+    //         temp=arr[0];
+    //         arr[0]=arr[1];
+    //         arr[1]= temp;
+    //     }
+    //     sum= arr[0]+arr[1]
+    //     var big = arr[0]-1;
+    //     while (big>arr[1]){
+    //         sum+=big;
+    //         big--;
+    //     }
+    //     console.log(sum);
+    // }
+
+    // sumAll([1, 4]);
+
+        // Finds the differences between two arrays and returns teh difference
+    // function arrDiff(arr1, arr2){
+    //     if (arr2.length>arr1.length){
+    //         var temp = arr1;
+    //         arr1 = arr2;
+    //         arr2 = temp;
+    //     }
+    //     var newArr=[];
+    //     for (var i=0; i<arr1.length; i++){
+    //         for (var j=0; j<arr2.length;j++){
+    //             if (arr2[j]===arr1[i]){
+    //                 arr1.splice(i, 1);
+    //                 arr2.splice(j, 1);
+    //                 j--;
+    //             }
+    //         }
+    //     }
+    //     var newArr = arr1;
+    //     for (var k=0; k<arr2.length; k++){
+    //         newArr.push(arr2[k]);
+    //     }
+    //     return newArr;
+    // }
+
+    // arrDiff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub1", 2,4,6])
+
+    // function forIn(arr, obj){
+    //     // just works for single items
+    //     var newArr=[];
+    //     for (var i=0; i<arr.length; i++){
+    //         var x;
+    //         for (x in arr[i]){
+    //             if (arr[i].hasOwnProperty(x) && arr[i][x] === obj[x]){
+    //                 newArr.push(arr[i]);
+    //             }
+    //         }
+            
+    //     }
+    //     console.log(newArr);
+    // }
+    // forIn([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })
+
+    // function pigLatinTranslator(str) {
+    //     let vowel = ['a', 'e', 'i', 'o', 'u'];
+    //     for (var i=0; i<vowel.length; i++){
+    //         if (str[0]==vowel[i]){
+    //             console.log(str+'way');
+    //             return str+'way';
+    //         }
+    //     }
+    //     for (var j=0; j<vowel.length; j++){
+    //         if (str[1]==vowel[j]){
+    //             console.log(str.slice(1)+str[0]+'ay')
+    //             return str.slice(1)+str[0]+'ay';
+    //         }
+    //     }
+    //     for (var k=1; k<str.length; k++){
+    //         for (var k1=0; k1<vowel.length; k1++){
+    //             if (str[k]==vowel[k1]||str[k]=='y'){
+    //                 console.log(str.slice(k)+str.slice(0, k)+'ay')
+    //                 return str.slice(k)+str.slice(0, k)+'ay'
+    //             }
+    //         }
+    //     console.log(str+'ay')
+    //     return str+'ay'    
+    //     }
+        
+        
+        
+    // }
+    // // pigLatinTranslator('celifornia')
+    // // pigLatinTranslator('paragraphs')
+    // pigLatinTranslator('glove')
+    // // pigLatinTranslator('eight')
+    // pigLatinTranslator('psche')
+    // pigLatinTranslator('psyche')
+    // pigLatinTranslator('ghdhdh')
+
+    // function dnaMatch(str){
+    //     let newArr = [];
+    //     let i=0;
+    //     while (i<str.length){
+    //         let pair;
+    //         if (str[i]=='A'){
+    //             pair = 'T';
+    //         }
+    //         else if (str[i]=='T'){
+    //             pair = 'A';
+    //         }
+    //         else if (str[i]=='C'){
+    //             pair = 'G';
+    //         }
+    //         else {
+    //             pair = 'C';
+    //         }
+    //         newArr[i]=[str[i],pair]
+    //         i++;
+    //     }
+    //     return newArr;
+    // }
+
+    // dnaMatch("ATCG");
+
+    // function fearNotLetter(str){
+    //     for (var i=1; i<str.length;i++){
+    //         if (str.charCodeAt(i)-str.charCodeAt(i-1)!==1){
+    //             let missing = str.charCodeAt(i)-1
+    //             return String.fromCharCode((missing));
+    //         }
+    //     }
+    //     return undefined;
+    // }
+
+    // fearNotLetter('abce')
+    // function convertHTML(str) {
+    //     let and = '&amp;';
+    //     let more = '&gt;';
+    //     let less = '&lt;';
+    //     let dblQuote= '&quot;';
+    //     let apos = '&apos;';
+    //     let arr=str.split("");
+    //     console.log(arr)
+    //     for (var i=0; i<arr.length; i++){
+    //         if (arr[i]==='&'){
+    //         arr[i]=and;
+    //         }
+    //         else if (arr[i]==='>'){
+    //         arr[i]=more;
+    //         }
+    //         else if (arr[i]==='<'){
+    //         arr[i]=less;
+    //         }
+    //         else if (arr[i]==='"'){
+    //         arr[i]=dblQuote;
+    //         }
+    //         else if (arr[i]==='\''){
+    //         arr[i]=apos;
+    //         }
+    //         str=arr.join('')
+    //     }
+    //     console.log(str)
+    //     return str;
+    // }
+
+    // convertHTML("Dolce & Gabbana");
+
+    function dropElements(arr, func) {
+        for (var i=0; i<arr.length; i++){
+            if (func(arr[i])==true){
+                return arr = arr.slice(i, arr.length);
+            }
+        }
+        // if none are true
+        return arr=[];
+    }
+
+    dropElements([1, 2, 3,9,4], function(n) {return n > 2; });
+
+</script>
