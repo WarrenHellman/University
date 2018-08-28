@@ -1,0 +1,19 @@
+<html>
+<body>
+    <h2>Here are all the users:</h2>
+    <% for (var x in users) { %>
+        <h3>Name: <%= users[x].name %></h3>
+        <h4>Email: <%= users[x].email %></h4>
+        <hr>
+    <% } %>
+    
+    <h2>A List of Numbers:</h2>
+    <% let y = 0 %>
+    <% while (y<10) { %>
+        <h4>Y is equal to: <%= y %></h4>
+        <% y++ %>
+    <% } %>
+    
+
+</body>
+</html>
