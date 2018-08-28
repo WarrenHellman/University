@@ -1,0 +1,33 @@
+ Volume in drive C is System
+ Volume Serial Number is B8CC-3A63
+
+ Directory of C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session1
+
+03/11/2018  11:23 AM    <DIR>          .
+03/11/2018  11:23 AM    <DIR>          ..
+03/11/2018  11:23 AM                 0 executingPython.txt
+               1 File(s)              0 bytes
+               2 Dir(s)  279,085,015,040 bytes free
+
+Microsoft Windows [Version 10.0.16299.248]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>cd desktop
+
+C:\Users\Admin\Desktop>cd cs
+
+C:\Users\Admin\Desktop\CS>cd cd academy
+
+C:\Users\Admin\Desktop\CS\CD Academy>cd intro to pythong
+The system cannot find the path specified.
+
+C:\Users\Admin\Desktop\CS\CD Academy>cd intro to python
+
+C:\Users\Admin\Desktop\CS\CD Academy\Intro to Python>python hello_world.py
+We all know that 5+5 does not equal 11
+Hello Python, Nice to meet you!
+My cat slumbers while I program
+My girlfriend wishes I'd help out with the chores
+I'm looking forward to getting up and stretching my legs
+
+C:\Users\Admin\Desktop\CS\CD Academy\Intro to Python>

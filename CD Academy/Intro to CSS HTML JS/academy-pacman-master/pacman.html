@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pacman</title>
+    <style>
+
+    </style>
+    <meta name=description content="My first game">
+    <link rel="stylesheet" type="text/css" href="pacman.css">
+</head>
+<body>
+    <div id="world">
+        <!-- <div class="wall"></div>
+        <div class="wall"></div>
+        <div class="wall"></div>
+        <div class="wall"></div>
+        <div class="pacman"></div>
+        <br>
+        <div class="wall"></div>
+        <div class="ground"></div>
+        <div class="sushi"></div>
+        <div class="sushi"></div>
+        <div class="sushi"></div> -->
+    </div>
+</body>        
+
+<script>
+    // 1= <div class="wall"></div>
+    // 2= <div class="ground"></div>
+    // 3= <div class="sushi"></div>
+    // 5= <div class="pacman"></div>
+    
+    var map = [
+        [1,1,1,1,1,1,1,1,1,1,1,1],
+        [1,2,2,2,2,2,2,1,1,1,2,1],
+        [1,2,2,2,2,2,2,1,1,1,2,1],
+        [1,2,2,2,2,2,1,1,1,1,2,1],
+        [1,2,2,2,2,2,1,1,1,2,2,1],
+        [1,2,2,2,2,2,1,1,1,1,2,1],
+        [1,2,2,2,2,2,1,1,1,2,2,1],
+        [1,1,1,1,1,1,1,1,1,1,1,1]
+    ]
+    function drawWorld() {
+        for(var y=0; y<map.length;y=y+1){
+            console.log(map[y]);
+        }
+    }
+    drawWorld();
+</script>
+</html>

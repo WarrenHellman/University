@@ -1,0 +1,54 @@
+Microsoft Windows [Version 10.0.16299.248]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>cd desktop
+
+C:\Users\Admin\Desktop>cd cs
+
+C:\Users\Admin\Desktop\CS>cd cd academy
+
+C:\Users\Admin\Desktop\CS\CD Academy>md ProgramWithPython
+
+C:\Users\Admin\Desktop\CS\CD Academy>cd programwithpython
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython>md Week1
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython>md Week2
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython>cd week1
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>dir > README.md
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>md session1
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>md session2
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>cd session1
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session1>dir > executingPython.txt
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session1>dir > helloworld.py
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session1>cd session2
+The system cannot find the path specified.
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session1>cd..
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>cd session2
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1\session2>cd..
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>cd week2
+The system cannot find the path specified.
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week1>cd..
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython>cd week2
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week2>dir > README.md
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week2>md session1
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week2>md session2
+
+C:\Users\Admin\Desktop\CS\CD Academy\ProgramWithPython\Week2>

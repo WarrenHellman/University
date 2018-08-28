@@ -1,0 +1,123 @@
+Warren H Intro to Python Week 2 HW
+
+#Multiples- Print all odd numbers from 1-1000
+
+for i in range(1,1000,2):
+    print i
+
+#prints all multiples of 5 from 5-1,000,000
+
+for i in range(5,1000001,5):
+    print i
+
+#or
+i=5
+while i<1000001:
+    print i
+    i=i+5 
+
+#Coding academy letter by letter: print every single letter in a string using a for loop
+
+string = "Coding is interesting"
+
+#if you know the length of the string
+for i in range (0,21):
+    print string[i]
+    
+
+#if you don't the length of the string
+j=0
+
+while j<len(string):
+  print string[j]
+  j=j+1
+
+#print every other character
+j=0
+
+while j<len(string):
+  print string[j]
+  j=j+2
+
+#if you want to skip spaces
+
+j=0
+
+while j<len(string):
+  if string[j]==" ":
+      j=j+1
+  else:
+    print string[j]
+    j=j+1
+
+#Coding Academy Working with Lists- create a function that adds all values in a list without Sum
+
+sumList= [2,3,6,8,22,18]
+
+def summers(list):
+    i=0
+    summer=0
+    while i<len(list):
+        summer=summer+list[i]
+        i=i+1
+    print summer
+
+summers(sumList)
+
+#print averag of a list
+
+def avgs(list):
+    i=0
+    avg=0
+    while i<len(list):
+        avg = avg+list[i]
+        i=i+1
+    print (avg/len(list))
+
+avgs(sumList)
+
+#nest loops: prints values of nested arrays
+
+a = [ [1, 2, 3, 4, 5, 6, 7, 8, 9], [31, 12, 50, 42, 5], [47, 7, 4, 2, 31, 40, 49]]
+
+def nestPrint(list):
+    i=0
+    while i<len(list):
+        j=0
+        while j<len(list[i]):
+            print list[i][j]
+            j=j+1
+        i=i+1 
+
+nestPrint(a)
+
+#Coding Academy Working with Dictionaries Assignment: create a dictionary and print hashes as a statement
+
+autoDictionary= {
+    "name":"Warren",
+    "age": 33,
+    "country of birth":"USA",
+    "favorite language":"Javascript"
+}
+
+for key in autoDictionary:
+    print "My "+key+" is "+str(autoDictionary[key])
+
+for key in autoDictionary:
+    print autoDictionary[key]
+
+#Coding Academy Groups and Names
+
+#Part 1, concatenate first name and last name of students
+
+students = [
+     {'first_name':  'Michael', 'last_name' : 'Jordan'},
+     {'first_name' : 'John', 'last_name' : 'Rosales'},
+     {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+     {'first_name' : 'KB', 'last_name' : 'Tonel'}
+]
+def dictConcat(list):
+    for key in list:
+        print key["first_name"], key["last_name"] 
+
+dictConcat(students)

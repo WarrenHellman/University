@@ -1,0 +1,5 @@
+print "We all know that 5+5 does not equal 11"
+print "Hello Python, Nice to meet you!"
+print "My cat slumbers while I program"
+print "My girlfriend wishes I'd help out with the chores"
+print "I'm looking forward to getting up and stretching my legs"

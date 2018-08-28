@@ -1,0 +1,23 @@
+<script>
+function longestWord(str){
+    var long= [];
+    var arr=[];
+    var length=0;
+    arr=str.split(/\s+/);
+    for(var i=0;i<arr.length;i++){
+        if (arr[i].length>length){
+            length=arr[i].length;
+        }
+    }
+    for (var j=0;j<arr.length; j++){
+        if (arr[j].length===length){
+            long.push(arr[j]);
+        }
+    }
+    console.log(long);
+    return long;
+}
+
+longestWord("The quick browns fox jumped over the lazy dog");
+
+</script>

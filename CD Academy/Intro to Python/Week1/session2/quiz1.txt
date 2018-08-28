@@ -1,0 +1,17 @@
+#Intro to Python Week 1 Quiz. Warren Hellman
+
+1. d
+
+2. b
+
+3. d
+
+4. c
+
+5. a
+
+6. c
+
+7. c
+
+8. b

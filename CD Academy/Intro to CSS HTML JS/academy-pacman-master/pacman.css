@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted purple; */
+}
+div{
+    margin: -2px;
+}
+.pacman{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    background-image: url("img/ninja.gif");
+    background-size: cover;
+    display: inline-block;
+}
+.wall{
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    border: 5px solid darkblue;
+    display: inline-block;
+}
+.ground{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    display: inline-block;
+}
+.sushi{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    background-image: url("img/sushi.png");
+    background-size: cover;
+    display: inline-block;
+    line-height: 0px;
+}
