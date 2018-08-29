@@ -12,11 +12,11 @@
     <form action="/display" method="post">
       <div class="name-field">
         Name: 
-        <input type="text">
+        <input name="name" type="text">
       </div>
       <div class="location-field">
         School Location: 
-        <select>
+        <select name='location'>
           <option value="Seattle">Seattle</option>
           <option value="Austin">Austin</option>
           <option value="Duluth">Duluth</option>
@@ -24,7 +24,7 @@
       </div>
       <div class="language-field">
         Favorite Language:
-        <select>
+        <select name="language">
           <option value="JavaScript">JavaScript</option>
           <option value="Spanish">Spanish</option>
           <option value="PHP">PHP</option>
@@ -32,7 +32,7 @@
       </div>
       <div class="comment-field">
         Comments:
-        <textarea name="Comments" cols="30" rows="10" placeholder="Please enter a comment"></textarea>
+        <textarea name="comment" cols="30" rows="10" placeholder="Please enter a comment"></textarea>
       </div>
       
       <button type="submit">Submit</button>

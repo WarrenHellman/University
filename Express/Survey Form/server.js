@@ -27,17 +27,21 @@ app.get('/', function(req, res) {
 });
 
 app.post('/display', function(req, res) {
+  req.session.name = req.body.name;
+  req.session.language = req.body.language;
+  req.session.location = req.body.location;
+  req.session.comment = req.body.comment;
   res.redirect('/results');
 })
 
 app.get('/results', function(req, res) {
-  res.render("results")
+  let info = {};
+  info.name = req.session.name;
+  info.location = req.session.location;
+  info.language = req.session.language;
+  info.comment = req.session.comment;
+  res.render("results", info )
 })
-// app.post('/plustwo', function(req, res) {
-//   addOne(req)
-//   res.redirect('/')
-// })
-
 
 // tell the express app to listen on port 8000
 app.listen(8000, function() {
