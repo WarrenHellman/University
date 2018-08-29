@@ -1,0 +1,36 @@
+Before you start coding this, first outline or write down the steps of accomplishing this. Do this for EVERY nodeJS exercise as doing these steps will help you build your app easily.
+
+For example for this particular app,
+
+Have the server render views/index.ejs that has the form for the user to fill out
+The user fills out the form and submits
+The form information is EMITTED to the server with the event name "posting_form"
+The server listens for an event 'posting_form' and when this event gets triggered, organizes all the emitted information to form a single message and sends this single message with the event called 'updated_message'. It also EMITs an event called 'random_number' with random number between 1-1000.
+The client listens for an event called 'random_number' and when this event gets triggered, shows the number in the HTML.
+The client listens for an event called 'updated_message' and when this event gets triggered, displays the message somewhere in the HTML
+Outlining these steps BEFORE YOU CODE, will make it so much easier to build your app. Again, there's not just one right way to build your app as you could build the same app using different steps but outlining what you plan to do first will increase your efficiency.
+
+If you're having some trouble following the flow of information, use the commented numbers above and reference the following: 
+
+initially the client will request a web page from the server by connecting to our server via our port "localhost:1337". The server then sends back the index.html file as shown above. The script will run on the client's browser and connect to our server via sockets.
+This triggers our server's connection listener to run, and this occurs for every new socket connection. 
+Then the server will emit a message 'greeting' to the client, because we placed an emit event there. 
+The client's 'greeting' listener will then be triggered... 
+...and log the data sent via the message on our browser's console. 
+Finally the client will emit a 'thank you' message to the server because we included this emit within the callback of our 'greeting' listener.
+The server's listener with the matching 'thank you' label will be triggered...
+...and invoke its callback.
+Session is a great resource for us to keep client specific information for each visit, just like we did in the Express chapter.
+
+Server variables, such as the 'counter' variable, are a good way of storing light weight information which will be shared between all clients connecting to our server. For example, we can place code in one of our server listener functions so it updates the counter every time a client emits a message to our server. Additionally, we can have our server broadcast a message to all clients along with the updated 'counter' variable. 
+
+The database is an ideal storage area for data which we need to persist beyond a server reset. We will learn how to implement a database in our Node projects in the up coming course. 
+
+Testing socket events
+Testing socket activities is an art form. The key points for testing socket stuff:
+
+Use multiple browsers (Firefox and Chrome are the best tandem. Safari just isn't as good for debugging).
+If you need multiple connections in the same browser, use an incognito/private browsing window. Not just another tab!!
+When your server restarts, refresh every window. 
+You do not need to wait to deploy to start testing your projects with multiple clients! Just go to your terminal and run the command ipconfig to find your ip address. Give this to a cohort mate and they can type that into their nav bar followed by a colon : and the port you are using to run your project, and you will be able to test your sockets with them. It will be something like 192.163.0.2:1337.
+You just read through a ton of information in this tab. Review all of it, and take some time to digest this stuff. It's not easy! This section is an advanced topic, so if you understood it, give yourself a big pat on the back. If you're struggling with the concepts, that's ok! Just take some time away from your computer and revisit this tab when you're feeling refreshed.
