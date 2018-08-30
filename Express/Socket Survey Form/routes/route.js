@@ -4,6 +4,7 @@ module.exports = function Route(app){
     res.render("index");
   });
   app.post('/submit', function(req, res) {
+    
     res.redirect('/')
   })
 
