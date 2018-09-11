@@ -30,10 +30,16 @@ const io = require('socket.io')(server);
     
 io.on('connection', function (socket) { //2
   
-  socket.emit('greeting', { msg: 'Greetings, from server Node, brought to you by Sockets! -Server' }); //3
-  socket.on('thankyou', function (data) { //7
-    console.log(data.msg); //8 (note: this log will be on your server's terminal)
-  });
+  // socket.emit('greeting', { msg: 'Greetings, from server Node, brought to you by Sockets! -Server' }); //3
+  // socket.on('thankyou', function (data) { //7
+  //   console.log(data.msg); //8 (note: this log will be on your server's terminal)
+  // });
+  socket.on("theEvent", function(data) {
+    let lucky = Math.floor(Math.random()*1000 +1)
+    let message = "You emitted the following information to the server: {name: "+data.name+", city: "+data.city+", language: "+data.language+", comment: "+data.comment+"}."+`<br><br>`+ "Your lucky number emitted by the server is "+lucky;
+    // console.log(message);
+    socket.emit("response", message);
+  })
     
 });
 
