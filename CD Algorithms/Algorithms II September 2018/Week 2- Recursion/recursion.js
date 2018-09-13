@@ -102,4 +102,4 @@ function rBinary(arr, n, high, low){
 
 }
 
-console.log(rBinary([1,4,5,6,8,10], 4));
+// console.log(rBinary([1,4,5,6,8,10], 4));
