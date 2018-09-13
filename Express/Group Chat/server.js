@@ -29,7 +29,14 @@ app.get('/', function(req, res) {
 server.listen(80);
 // WARNING: app.listen(80) will NOT work here!
 
-
+let chatLine = ""; 
 io.on('connection', function (socket) {
-  
+  socket.emit("chatLog", chatLine);
+  socket.on("message", function(msg){
+    
+    chatLine+= `${msg.name}: ${msg.message} <br>`;
+    // console.log(chatLine);
+    io.emit("toGroup", chatLine);
+  })
+
 });
