@@ -29,10 +29,11 @@ app.get('/', function(req, res) {
       console.log("error!", err);
     }
     else {
-      console.log(users);
+      let user = {users}
+      res.render("index", user);
     }
   })
-  res.render("index");
+  
 });
 app.post('/users', function(req, res){
   console.log("POST DATA: ", req.body);
