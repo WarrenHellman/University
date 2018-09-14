@@ -8,8 +8,12 @@
 </head>
 <body>
   <h1>Ay yo</h1>
-
-  <p><%= JSON.stringify(users) %></p>
+  <ul>
+  <% for (let i=0; i<users.length; i++) { %>
+    <li>Name: <%= users[i].name%>, Age: <%= users[i].age %></li>
+  <% } %>
+  </ul>
+  <!-- <p><%= JSON.stringify(users) %></p> -->
 
   <h3>A form</h3>
   <form action="/users" method="POST">
