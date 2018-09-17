@@ -38,10 +38,13 @@ app.get('/', function(req, res) {
   res.render("index");
   
 });
-app.post('/users', function(req, res){
+app.get('/quotes', function(req, res){
+  res.render("quotes");
+});
+app.post('/quotes', function(req, res){
   console.log("POST DATA: ", req.body);
 
-  res.redirect("/");
+  res.redirect("/quotes");
 });
 
 server.listen(80);
