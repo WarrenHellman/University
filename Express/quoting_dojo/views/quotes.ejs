@@ -13,8 +13,13 @@
     <div class="quote-box">
       <div class="content">
         <h3 id="title">See these quotes?</h3>
+        <% for(const quote of quotes) { %>
+          <p> "<%= quote.quote %>"</p>
+          <p> -<%= quote.name %> at <%= quote.postDate%></p>
+          <hr>
+        <% } %>
         <form action="/" method="GET">
-          <button class="button-primary" type="button" id="backToQuotes">Submit another quote</button>
+          <button class="button-primary" type="submit" id="backToQuotes">Submit another quote</button>
         </form>
 
       </div>
