@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Gummy Bear Family</title>
+</head>
+<body>
+  <div class="container">
+    <h1>We are the gummy bears</h1>
+    <% for(let i=0; i<members.length; i++) { %>
+      <% if (members[i].age<10) {%>
+        <img src="/young.jpg">
+      <%}%>
+      <% if(members[i].age>=10 && members[i].age<25) { %>
+        <img src="/mid.jpg">
+      <%}%>
+      <% if(members[i].age>=25 && members[i].age<65) { %>
+        <img src="/dad.jpg">
+      <%}%>
+      <% if (members[i].age>=65) { %>
+        <img src="/old.jpg">
+      <%}%>
+      <p>Name: <%= members[i].name %></p>
+      <p>Age: <%= members[i].age %></p>
+      <p>About: <%= members[i].about %></p>
+      <hr>
+    <% } %>
+    <!-- if age range, show photo -->
+    <form action="/bears/new" method="get">
+      <button type="submit">Add new Gummy Bear</button>
+    </form>
+  </div>
+  
+</body>
+</html>
