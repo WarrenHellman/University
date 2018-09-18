@@ -22,11 +22,18 @@
         <img src="/dad.jpg">
       <%}%>
       <% if (members[i].age>=65) { %>
-        <img src="/old.jpg">
+        <img src="/old.png">
       <%}%>
-      <p>Name: <%= members[i].name %></p>
+      <p>Name: <a href="/bears/<%= members[i]._id %>"><%= members[i].name %></a></p>
       <p>Age: <%= members[i].age %></p>
       <p>About: <%= members[i].about %></p>
+      <form id="editBTN" action="/bears/edit/<%= members[i]._id %>" method="GET">
+        <button type="submit">Edit</button>
+      </form>
+      <form id="deleteBTN" action="/bears/delete/<%= members[i]._id %>" method="POST">
+        <button type="submit" onclick="alert('are you sure?')">Delete</button>
+      </form>
+      
       <hr>
     <% } %>
     <!-- if age range, show photo -->

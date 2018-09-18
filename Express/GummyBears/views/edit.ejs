@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Edit Bear</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Edit the bear!</h2>
+    <form action="/bears/<%= bear.id %>" method="post">
+      <div class="row">
+        <div class="six columns">
+          <!-- Add Placeholder text with the values -->
+          <label for="name">Name: </label>
+          <input class="u-full-width" type="text" name="name" value="<%= bear.name %>">
+          <label for="age">Age: </label>
+          <input type="number" name="age" value="<%= bear.age %>">
+          <label for="about">About me: </label>
+          <input class="u-full-width" type="text" name="about" value="<%= bear.about %>">
+          <button class="button-primary" type="submit">Submit Edits!</button>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+  
+</body>
+</html>

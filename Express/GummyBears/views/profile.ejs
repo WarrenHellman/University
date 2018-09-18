@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Gummy Bear Family</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Meet <%= bear.name %></h1>
+
+      <% if (bear.age<10) {%>
+        <img src="/young.jpg">
+      <%}%>
+      <% if(bear.age>=10 && bear.age<25) { %>
+        <img src="/mid.jpg">
+      <%}%>
+      <% if(bear.age>=25 && bear.age<65) { %>
+        <img src="/dad.jpg">
+      <%}%>
+      <% if (bear.age>=65) { %>
+        <img src="/old.png">
+      <%}%>
+
+      <p>Name: <%= bear.name %></a></p>
+      <p>Age: <%= bear.age %></p>
+      <p>About: <%= bear.about %></p>
+      <form id="editBTN" action="/bears/edit/<%= bear._id %>" method="GET">
+        <button type="submit">Edit</button>
+      </form>
+      <form id="deleteBTN" action="/bears/delete/<%= bear._id %>" method="POST">
+        <button type="submit" onclick="alert('are you sure?')">Delete</button>
+      </form>
+    <form action="/" method="get">
+      <button type="submit">Go Backs</button>
+    </form>
+  </div>
+  
+</body>
+</html>

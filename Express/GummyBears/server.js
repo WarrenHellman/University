@@ -29,7 +29,6 @@ app.get('/', function(req, res) {
     if (err) {
       console.log(err)
     }
-    console.log({members:members});
     res.render("index", {members: members});
   })
   
@@ -47,6 +46,35 @@ app.post('/bears', function(req, res) {
     res.redirect('/');
   })
 });
+app.post('/bears/:id', function(req, res){
+  console.log(req.params.id)
+  Member.update({_id: req.params.id}, req.body, function(err, result){
+    if(err) {console.log(err)}
+    res.redirect("/")
+  });
+});
+
+app.get('/bears/edit/:id', function(req, res){
+
+  Member.find({_id: req.params.id}, function(err, response){
+    if (err){console.log(err)}
+    res.render('edit', {bear: response[0]})
+  })
+})
+app.get('/bears/:id', function(req, res){
+
+  Member.find({_id: req.params.id}, function(err, response){
+    if (err){console.log(err)}
+    res.render('profile', {bear: response[0]})
+  })
+})
+
+app.post('/bears/delete/:id', function(req, res) {
+  Member.remove({_id: req.params.id}, function (err, response){
+    if (err) {console.log(err)}
+    res.redirect('/')
+  })
+})
 
 
 server.listen(80);
