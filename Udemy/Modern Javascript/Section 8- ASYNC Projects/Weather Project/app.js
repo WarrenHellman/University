@@ -1,4 +1,13 @@
-// http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+long+"&APPID=180a926458624f80c1d61e394308d779"
+//Init weather Obj
+const weather = new Weather('Seattle');
 
-//allow zipcode or city
+// Get weather on DOM load:
+document.addEventListener('DOMContentLoaded', getWeather);
+
+function getWeather(){
+  weather.getWeather()
+    .then(results => {
+      console.log(results)
+    })
+    .catch(err => console.log(err));}
 
