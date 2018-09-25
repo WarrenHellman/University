@@ -1,5 +1,5 @@
 
-<script>
+
     //FCC Algorithms round 1
 
     // function reverseString(str){
@@ -226,22 +226,21 @@
     //     //or
     //     //return arr.slice(howMany);
     // }
-
-    function mutations(arr){
-        //checks that the characters of string one can make up the characters in string 2
-        arr[1] = arr[1].toLowerCase();
-        arr[0] = arr[0].toLowerCase();
-        for (var i = 0; i<arr[1].length; i++){
-            if (arr[0].indexOf(arr[1][i])===-1){
-                console.log(false)
-            }
+    // function mutations(arr){
+    //     //checks that the characters of string one can make up the characters in string 2
+    //     arr[1] = arr[1].toLowerCase();
+    //     arr[0] = arr[0].toLowerCase();
+    //     for (var i = 0; i<arr[1].length; i++){
+    //         if (arr[0].indexOf(arr[1][i])===-1){
+    //             console.log(false)
+    //         }
             
-        }
-        console.log(true);
+    //     }
+    //     console.log(true);
 
 
-    }
-    mutations(["Mary", "Aprmy"]);
+    // }
+    // mutations(["Mary", "Aprmy"]);
 
     // function falsy(arr){
     //     //returns an array with no falsy values (NaN, false, 0, null, undefined, "")
@@ -294,27 +293,72 @@
 
     // whereDoIBelong([5, 3, 20, 3], 5);
 
-    function rot13(str){
-        //all letters will be in caps and need to be shifted by 13 letters for the true answer
-        var decoder = [];
-        for (var i=0;i<str.length;i++){
-            decoder.push(str[i].charCodeAt())
-            if (decoder[i]>90||decoder[i]<65){
-                decoder[i]=String.fromCharCode(decoder[i])
-                continue;
-            }
-            else if (decoder[i]+13>90){
-                decoder[i]= (decoder[i]+13)-91+(65)
-                decoder[i]=String.fromCharCode(decoder[i])
-            }
-            else {
-                decoder[i]+=13;
-                decoder[i]=String.fromCharCode(decoder[i]);    
-            }
-        }
+    // function rot13(str){
+    //     //all letters will be in caps and need to be shifted by 13 letters for the true answer
+    //     var decoder = [];
+    //     for (var i=0;i<str.length;i++){
+    //         decoder.push(str[i].charCodeAt())
+    //         if (decoder[i]>90||decoder[i]<65){
+    //             decoder[i]=String.fromCharCode(decoder[i])
+    //             continue;
+    //         }
+    //         else if (decoder[i]+13>90){
+    //             decoder[i]= (decoder[i]+13)-91+(65)
+    //             decoder[i]=String.fromCharCode(decoder[i])
+    //         }
+    //         else {
+    //             decoder[i]+=13;
+    //             decoder[i]=String.fromCharCode(decoder[i]);    
+    //         }
+    //     }
         
-        return decoder.join("");
-    }
-    rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
+    //     return decoder.join("");
+    // }
+    // rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
 
-</script>
+        // timeSense(timeNow, timePast)
+
+        // -given two parameters (the current time and a time in the past) return the difference in a human readable form:
+
+        // like: 1 yr, 6 months, 12 days, 4 hrs ago
+
+        // only display the highest unit required...so if its below a year
+        // 6 months, 12 days, 4 hrs
+        // as for inputs, timePast will be a string formated as such 'Fri Sep 21 2018 10:31:45 GMT-0700 (Pacific Daylight Time)'
+        // timeNow can be setup how you like
+
+// function timeSense(timeNow, timePast) {
+//     // Convert to standardized dates
+//     let now = new Date(timeNow);
+//     let then = new Date(timePast);
+
+//     // Get difference between the dates, in seconds (from milliseconds)
+//     let diff = Math.abs(now-then) / 1000;
+    
+//     // Break in to years, days, hours, minutes seconds 
+//     const years = Math.floor(diff/31536000);
+//     const days = Math.floor(diff / 86400) % 365;
+//     const hours = Math.floor(diff / 3600) % 24;
+//     const minutes = Math.floor(diff / 60) % 60;
+//     const seconds = Math.floor(diff % 60);
+
+//     // Constructs correct return statement
+//     let elapsedTime = "";
+//     if (years === 1) {elapsedTime += years + ' year ';}
+//     else if (years > 1) {elapsedTime += years + ' years ';}
+//     if (days === 1) {elapsedTime += days + ' day ';}
+//     else if (days > 1) {elapsedTime += days + ' days ';}
+//     if (hours === 1) {elapsedTime += hours + ' hour ';}
+//     else if (hours > 1) {elapsedTime += hours + ' hours ';}
+//     if (minutes === 1) {elapsedTime += minutes + ' minute ';}
+//     else if (minutes > 1) {elapsedTime += minutes + ' minutes ';}
+//     if (seconds === 1) {elapsedTime += seconds + ' second ';}
+//     else if (seconds > 1) {elapsedTime += seconds + ' seconds ';}
+//     elapsedTime += 'ago';
+
+//     return elapsedTime;
+// }
+
+// console.log(timeSense('Fri Sep 21 2018 10:31:45 GMT-0700', 'Mon Sep 21 2017 09:34:44 GMT-0700'));
+
+
