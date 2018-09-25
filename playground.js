@@ -366,61 +366,74 @@
 // if a date argument is passed, return a date for the next Saturday after that (at noon)
 
 function whenIsNextSaturdayNoon(optionalDate){
-    // If optional date is empty, return upcoming Saturday
-    let today;
+    let referenceDay;
+    // If no date is entered as an argument, function will create a current timestamp to find the next Saturday
     if (!optionalDate){
-        today = Date.now()
-        console.log('no optional date')
+        referenceDay = Date.now();
     }
-    else {today = new Date(optionalDate)}
-    console.log("today is "+today)
+    // First checks to see if the user submitted date argument is valid. If it isn't it will return an error message. If it is, the function will use that date to find next Saturday. The date needs to be converted to milliseconds first 
+    else {
+        let checkBadDate = Date.parse(optionalDate);
+        if (isNaN(checkBadDate) == true){
+            return 'Error, please check your date';
+        }
+        let dateConversion = new Date(optionalDate);
+        referenceDay = dateConversion.getTime();
+    }
     let millisecondsPerDay = 86400000;
-    let dayOfWeek = new Date(today).getDay()
+    // Gets the day of the week for the entered date (user submitted or default)
+    let dayOfWeek = new Date(referenceDay).getDay();
+    // Takes the day of the week, adds (in milliseconds) x days to get the date of the upcoming Saturday. Can delete the day variables, I left them in to help read the getDay output (Sunday=0, Saturday=6)
     switch (dayOfWeek) {
         case 0:
             day = "Sunday";
-            upcomingSaturday = String(new Date(today + 6*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 6*(millisecondsPerDay)));
         case 1:
             day = "Monday";
-            upcomingSaturday = String(new Date(today + 5*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 5*(millisecondsPerDay)));
             break;
         case 2:
             day = "Tuesday";
-            upcomingSaturday = String(new Date(today + 4*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 4*(millisecondsPerDay)));
             break;
         case 3:
             day = "Wednesday";
-            upcomingSaturday = String(new Date(today + 3*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 3*(millisecondsPerDay)));
             break;
         case 4:
             day = "Thursday";
-            upcomingSaturday = String(new Date(today + 2*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 2*(millisecondsPerDay)));
             break;
         case 5:
             day = "Friday";
-            upcomingSaturday = String(new Date(today + 1*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
+            upcomingSaturday = String(new Date(referenceDay + 1*(millisecondsPerDay)));
             break;
         case 6:
             day = "Saturday";
-            // Check to see if the saturday at noon has passed
-            upcomingSaturday = String(new Date(today + 0*(millisecondsPerDay)));
-            arr = upcomingSaturday.split(' ')
-        default: 
-            day = "Welp, somehow you didn't even pick a real date!"
+            // Checks to see if it is past noon already on Saturday. If so, returns the following Saturday
+            if (new Date(referenceDay).getHours()>12){
+                upcomingSaturday = String(new Date(referenceDay + 7*(millisecondsPerDay)));
+            }
+            else {
+                upcomingSaturday = String(new Date(referenceDay + 0*(millisecondsPerDay)));
+            }
     }
-    console.log(new Date(upcomingSaturday))
-    let nextSaturday = "Saturday "
+    // Splits the date output up for the return statement
+    const dateOutput = upcomingSaturday.split(' ');
+    // Building the final return statement
+    let saturdayDate = "Saturday ";
     for (let i=1; i<=3; i++){
-        nextSaturday += arr[i] + ' '
+        saturdayDate += dateOutput[i] + ' ';
     }
-    return nextSaturday;
-    
+    saturdayDate+="at Noon";
+    return saturdayDate;
 }
 
-console.log(whenIsNextSaturdayNoon('1/3/1992'))
+console.log(whenIsNextSaturdayNoon())
+console.log(whenIsNextSaturdayNoon('9/11/2001'))
+console.log(whenIsNextSaturdayNoon('4/1'))
+console.log(whenIsNextSaturdayNoon('6/1/1'))
+console.log(whenIsNextSaturdayNoon('1'))
+console.log(whenIsNextSaturdayNoon('6/1/20=04'))
+console.log(whenIsNextSaturdayNoon('Jan 4 1999'))
+console.log(whenIsNextSaturdayNoon('october/7/2004'))
