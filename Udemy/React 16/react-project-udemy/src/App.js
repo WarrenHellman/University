@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import Person from './Person/Person';
 
 class App extends Component {
   render() {
-    // return (
-    //   <div className="App">
-    //     <h1>Hey there handsome!</h1>
-    //   </div>
-    // );
+    return (
+      <div className="App">
+        <h1>Hey there handsome!</h1>
+        <Person/>
+      </div>
+    );
 
     // Both the above step and below do the same thing but the above is easier to write with JSX and will compile down to the below. 
 
