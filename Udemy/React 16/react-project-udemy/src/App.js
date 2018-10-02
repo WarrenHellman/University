@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    // return (
+    //   <div className="App">
+    //     <h1>Hey there handsome!</h1>
+    //   </div>
+    // );
+
+    // Both the above step and below do the same thing but the above is easier to write with JSX and will compile down to the below. 
+
+    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'I\'m the text!'))
   }
 }
 
