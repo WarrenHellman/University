@@ -10,15 +10,6 @@ class App extends Component {
     userNames : [
       {name: 'Sharpizoid'},
       {name: 'Tuna Boat'}
-    ],
-    quotes: [
-      {quote: '"Each cat must walk over the human every morning to activate them"'},
-      {quote: '"Failure to do so may result in never being fed EVER again"'},
-      {quote: '"If it ain\'t tuna, it ain\'t getting et"'},
-      {quote: '"Failure to wake a human may result in never being fed EVER again"'},
-      {quote: '"Of all of the people, Warren is my fave"'},
-      {quote: '"It\'s on my rider, I need at least 10 comfy spots to sleep"'},
-      {quote: '"When is this house going to get automatic doors and an escalator?"'},
     ]
   }
   makeClick = () => {

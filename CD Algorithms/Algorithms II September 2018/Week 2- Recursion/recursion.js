@@ -103,3 +103,14 @@ function rBinary(arr, n, high, low){
 }
 
 // console.log(rBinary([1,4,5,6,8,10], 4));
+
+// const randNum = () => {
+//   Math.floor(Math.random()*(5)+1)
+// }
+
+function randNum() {
+  const num = Math.floor(Math.random()*(5)+1)
+  return num;
+}
+
+console.log(randNum())
