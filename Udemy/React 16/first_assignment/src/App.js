@@ -3,7 +3,6 @@ import './App.css';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput'
 import './UserOutput/UserOutput.css'
-import './UserInput/UserInput.css'
 
 class App extends Component {
   state = {

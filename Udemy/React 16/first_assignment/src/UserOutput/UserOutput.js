@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const quotes = [
   {quote: '"Each cat must walk over the human every morning to activate them"'},
   {quote: '"Failure to do so may result in never being fed EVER again"'},
