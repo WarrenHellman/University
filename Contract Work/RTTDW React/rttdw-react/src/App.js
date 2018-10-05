@@ -20,6 +20,9 @@ class App extends Component {
         <div>
           <CardBody/>
         </div>
+        <div>
+          <Footer/>
+        </div>
       </div>
     );
   }

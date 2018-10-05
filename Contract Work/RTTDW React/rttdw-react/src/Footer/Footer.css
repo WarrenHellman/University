@@ -1,3 +1,20 @@
 .Footer {
-  
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 5000;
+  box-shadow: 0 -2px #ccc;
+  display: inline-block;
+}
+
+.github {
+  height: 30px;
+}
+
+.linkedIn {
+  height: 30px;
+  margin-left: 5px;
 }
