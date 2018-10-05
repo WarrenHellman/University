@@ -1,0 +1,9 @@
+.CardBody {
+  margin-top: 82px;
+  width: 80%;
+  background-color: #c42f2f;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  position: fixed;
+}
