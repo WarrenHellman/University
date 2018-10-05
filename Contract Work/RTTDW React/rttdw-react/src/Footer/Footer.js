@@ -10,8 +10,8 @@ const Footer = () => {
         <p className='Copyright'>©  Recursive Thinking, All Rights Reserved</p>
       </div>
       <div>
-        <img className='github' src={githubIcon} alt='GitHub link' />
-        <img className='linkedIn' src={linkedin} alt='LinkedIn link' />
+        <a href='https://github.com/RecursiveThinking/' target='_blank' rel="noopener noreferrer"><img className='github' src={githubIcon} alt='GitHub link' /></a>
+        <a href='https://www.linkedin.com/company/recursivethinking/' target='_blank' rel="noopener noreferrer"><img className='linkedIn' src={linkedin} alt='LinkedIn link' /></a>
       </div>
     </div>
   
