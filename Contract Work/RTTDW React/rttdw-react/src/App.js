@@ -7,7 +7,22 @@ import CardBody from './CardBody/CardBody';
 import Footer from './Footer/Footer';
 
 class App extends Component {
+
   render() {
+    const titles = ["Who we Are", 'Getting Started'];
+    let title;
+    title = (
+      <div className='sidebarFormat'>
+        {titles.map((sideBarTitle)=>{
+          return <div>
+            <Sidebar 
+            title={sideBarTitle}/>
+          </div>
+          
+        })}
+
+      </div>
+    )
     return (
       <div className="App">
         <div>
@@ -15,7 +30,7 @@ class App extends Component {
         </div>
         <div>
           {/* Currently have the z-index up to get the box shadow. Better way? */}
-          <Sidebar/>
+          {title}
         </div>
         <div>
           <CardBody/>

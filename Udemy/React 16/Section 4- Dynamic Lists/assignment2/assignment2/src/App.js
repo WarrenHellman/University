@@ -15,7 +15,6 @@ class App extends Component {
     this.setState({message : e.target.value})
   }
   deleteLetter = (index) => {
-    console.log('index');
     const message = [...this.state.message];
     message.splice(index,1);
     const newMessage = message.join("");
