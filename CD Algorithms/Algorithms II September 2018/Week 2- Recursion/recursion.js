@@ -108,9 +108,16 @@ function rBinary(arr, n, high, low){
 //   Math.floor(Math.random()*(5)+1)
 // }
 
-function randNum() {
-  const num = Math.floor(Math.random()*(5)+1)
-  return num;
-}
+// function randNum() {
+//   const num = Math.floor(Math.random()*(5)+1)
+//   return num;
+// }
 
-console.log(randNum())
+// console.log(randNum())
+
+let str = 'warren'
+let arr = str.split('');
+
+arr.sort((a,b)=>{return b>a})
+
+console.log(arr)
