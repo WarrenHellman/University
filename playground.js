@@ -429,11 +429,36 @@ function whenIsNextSaturdayNoon(optionalDate){
     return saturdayDate;
 }
 
-console.log(whenIsNextSaturdayNoon())
-console.log(whenIsNextSaturdayNoon('9/11/2001'))
-console.log(whenIsNextSaturdayNoon('4/1'))
-console.log(whenIsNextSaturdayNoon('6/1/1'))
-console.log(whenIsNextSaturdayNoon('1'))
-console.log(whenIsNextSaturdayNoon('6/1/20=04'))
-console.log(whenIsNextSaturdayNoon('Jan 4 1999'))
-console.log(whenIsNextSaturdayNoon('october/7/2004'))
+// console.log(whenIsNextSaturdayNoon())
+// console.log(whenIsNextSaturdayNoon('9/11/2001'))
+// console.log(whenIsNextSaturdayNoon('4/1'))
+// console.log(whenIsNextSaturdayNoon('6/1/1'))
+// console.log(whenIsNextSaturdayNoon('1'))
+// console.log(whenIsNextSaturdayNoon('6/1/20=04'))
+// console.log(whenIsNextSaturdayNoon('Jan 4 1999'))
+// console.log(whenIsNextSaturdayNoon('october/7/2004'))
+
+const isValidParenthesis = s => {
+    let arr = s.split('');
+    
+    for (let i=0; i<arr.length; i++){
+        console.log("arr[i]: "+arr[i]+", i: "+i+", arr:"+arr)
+        if (arr[i]===')'||arr[i]==='}'||arr[i]===']'){return false}
+        if(arr[i]=='('&&arr[i+1]==')'){
+            arr.splice(i,2)
+            i-=2
+        }
+        else if (arr[i]=='['&&arr[i+1]==']'){
+            arr.splice(i,2)
+            i-=2
+        }
+        else if (arr[i]=='{'&&arr[i+1]=='}'){
+            arr.splice(i,2)
+            i-=2
+        }
+    }
+    if (arr.length>0){return false}
+    return true;
+}
+
+console.log(isValidParenthesis('(()[{}]{})'))

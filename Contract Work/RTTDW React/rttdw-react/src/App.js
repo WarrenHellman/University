@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Row, Grid, Col } from 'react-bootstrap';
 import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
 import CardBody from './CardBody/CardBody';
