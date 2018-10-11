@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 const person = (props) => {
+  
   return (
     <div className="Person">
       {/* below we are passing a click function as a prop from our App class where the switchNameHandler method was defined. This is the preferred way to pass methods from our class without give access to the state. This is very important because our functional components cannot create methods and are state-less */}

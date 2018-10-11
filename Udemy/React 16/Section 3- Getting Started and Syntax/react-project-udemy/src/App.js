@@ -3,6 +3,7 @@ import './App.css';
 import Person from './Person/Person';
 import './Person/Person.css'
 
+
 class App extends Component {
   // State is a property of the Component class (available here by extending it through App). It is only available in class based components It is an object that we can access in our login through this.state.key). The great thing about state is when it changes, it will re-render the component.
   state = {
@@ -60,11 +61,12 @@ class App extends Component {
   render() {
     // adding inline style
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
     }
     let persons= null;
     if (this.state.showPersons){
@@ -82,11 +84,24 @@ class App extends Component {
           })}
         </div>
       );
+      style.backgroundColor = 'red';
+      
     };
 
+    let classes = [];
+    if (this.state.persons.length<=2){
+      classes.push('red');
+    }
+    if (this.state.persons.length<=1){
+      classes.push('bold')
+    }
+  
+
     return (
+
       <div className="App">
         <h1>Hey there handsome!</h1>
+        <p className={classes.join(' ')}>I'm dynamically styled text!</p>
         <button 
         style={style}
         onClick={() => this.togglePersonsHandler()}>Toggle Persons</button>

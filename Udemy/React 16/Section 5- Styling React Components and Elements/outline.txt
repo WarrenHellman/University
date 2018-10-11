@@ -1,0 +1,28 @@
+Started by applying style to our dynamic list in section 4
+
+Added dynamic styling using Javascript to our cards.
+
+Installed radium package to the project. This package lets us use pseudo selectors inside of the javascript pages of the project. To use it, we import it to a file and wrap the export inside of the package element e.g. export default Radium(App); This is known as a higher level component and works on functional components and higher level components. 
+
+  -Pseudo properties can now be added to our inline styling like a normal element
+
+    ':hover': {
+        backgroundColor: 'lightgreen',
+        color: 'black'
+  -They can also be added externally to our inline style object 
+
+    style[':hover'] = {
+        backgroundColor: 'lightgreen',
+        color: 'black'
+      }
+
+  If you want to use keyframes or media queries, import { StyleRoot } from radium and wrap your final JSX application in it to apply the change. 
+
+    -Here is an example of inline style of media query on our person component:
+
+      const style = {
+        '@media (min-width: 500px)': {
+        width: '450px'
+      }
+
+CSS Modules
