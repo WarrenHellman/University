@@ -476,6 +476,171 @@ const CardBody = () => {
         </div>
       </div>
 
+      <div className='pageCard'>
+        <div className='pageBody'>
+          <h4 class="colorGray42 fw500 ttup">Back End PreRequisites</h4>
+          <hr></hr>
+          <p>
+            The following are the back end prerequisites for the Recursive Thinking website.
+          </p>
+          <h5>
+            Install Python 
+          </h5>
+          <p>
+            Select the version for your OS at <a href="https://www.python.org/" target="/"><span class="linkFormatting">https://www.python.org</span></a>. Our deployment script (deployrtw.py), which runs the Amazon Web Services Command Line Interface (AWS CLI) and processes the template.yml file into different Amazon Web Services, runs on Python.
+          </p>
+          <p>
+            A quick way to test if you have Python installed is to run the following command in the CLI/terminal:
+          </p>
+          <p>
+            <span class="codeSnippetGitCommand">python --version</span> 
+          </p>
+          <p>
+            If you do not see "Python X.X.X" (where the X's are version/release numbers), then you do not have Python installed. If this is the case, click on the link above to go to the Python Software Foundation's website and download a copy for your version of OS.
+          </p>
+          <p>
+            *Note: Currently, some of the code in deployrtw.py requires modules only available in Python 3, so please download a Python 3 version to prevent errors in running the script.
+          </p>
+          <h5>
+            Install AWS CLI
+          </h5>
+          <p>
+            Select the version for your OS at <a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="/"><span class="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/installing.html</span></a>. The deployment script executes AWS CLI commands in order to build the back end stack of component services.
+          </p>
+          
+          <p>
+            A quick way to test if you have AWS CLI installed is to run the following command in the CLI/terminal:
+          </p>
+          <p>
+            <span class="codeSnippetGitCommand">aws --version</span>
+          </p>
+          <p>
+            This should return a message with your version, such as:
+            <br></br><br></br> aws-cli/1.11.84 Python/3.5.2 Linux/4.4.0-59-generic botocore/1.5.47
+          </p>
+          <h5>
+            Create an AWS Account
+          </h5>
+          <p>
+            Create your account at <a href="https://aws.amazon.com/free/" target="/"><span class="linkFormatting">https://aws.amazon.com/free</span></a>. You will use AWS to create your own back end for the website.
+          </p>
+          <h5>
+            Configure AWS CLI
+          </h5>
+          
+          <p>
+            Once you install AWS CLI, you will need to configure it so that it points to your AWS account. Find the instructions to do this at <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="/"><span class="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html</span></a>.
+          </p>
+          <p>
+            Please note that there has been some confusion with the instructions regarding Identity and Access Management (IAM) user names. This is addressed in the section "To get the access key ID and secret access key for an IAM user" under step 3 ("Choose your IAM user name"). To cover creating an IAM resource and setting permissions more thoroughly, you will find a step-by-step guide below.
+          </p>
+          <ul>
+            <li>
+              <h5>Creating an IAM Resource and Setting Permissions</h5>
+              <p>
+                It is recommended that you check the AWS credentials and config file as described in the documentation.
+              </p>
+              <p>
+                The credentials file should contain the AWS access key ID and the AWS secret access key.
+              </p>
+              <p>
+                The config file should contain the region name and default output format.
+              </p>
+              <p>
+                If these files have both these keys and the correct values from your account, you should have a properly configured AWS CLI.
+              </p>
+            </li>
+            <li>
+              <h5>
+                Begin Valid Git Email Configuration
+              </h5>
+              <p>
+                All Amazon Simple Storage Service (S3) buckets and folders need to have unique names. deployrtw.py creates a unique bucket name using both the stack name (recursive-thinking-server) and the email address provided in your Git configuration.
+              </p>
+              <p>
+                Because of this, the local Git config needs a valid email.
+              </p>
+              <p>
+                First, check to see if a valid email is configured in Git by running:
+              </p>
+              <p>
+                <span class="codeSnippetGitCommand">git config --global user.email</span>
+              </p>
+              <p>
+                What should log to the screen is a properly formatted email address like:
+              </p>
+              <p>
+                -yourNameHere-@-anEmailServiceProvider-.com
+              </p>
+              <p>
+                If you do not see a valid email returned, then set it running:
+              </p>
+              <p>
+                <span class="codeSnippetGitCommand">git config --global user.email -yourNameHere-@-anEmailServiceProvider-.com"</span>
+              </p>
+              <p>
+                Please note that -yourNameHere- and -anEmailServiceProvider- represent unique information that you provide (braces not included).
+              </p>
+              <p>
+                Test this again by running:
+              </p>
+              <p>
+                <span class="codeSnippetGitCommand">git config --global user.email</span>
+              </p>
+              <p>
+                At this point, you should have a valid email input.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className='pageCard'>
+        <div className='pageBody'>
+          <h4 class="colorGray42 fw500 ttup">Creating an IAM Resource and Setting Permissions</h4>
+          <hr></hr>
+          <ul>
+            <li>
+              <p>1. Open the IAM console.</p>
+              <p>Select "Users" from left menu.</p>
+              <p>Click the "Add user" button.</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_00_Add_User.jpg")} alt=""></img>
+            </li>
+            <li>
+              <p>2. Fill in your desired name.</p>
+              <p>Select "Programatic access" checkbox.</p>
+              <p>Click "Next: Permissions."</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_01_Name_and_Type.jpg")}alt=""></img>
+            </li>
+            <li>
+              <p>3a. Select the "Attach existing policies directly" div (an HTML element).</p>
+              <p>In the policy table, click the "AdministratorAccess" checkbox.</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_02_01_Permissions.jpg")} alt=""></img>
+              <p>3b. Under "Set permissions boundary," select "Create user without a permissions boundary."</p>
+              <p>Click "Next: Review."</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_02_02_Permissions.jpg")} alt=""></img>
+            </li>
+            <li>
+              <p>4. Make sure configuration matches the image below.</p>
+              <p>If so, select "Create user."</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_03_Review.jpg")} alt=""></img>
+            </li>
+            <li>
+              <p>5. If user creation is successful, you will see the following page.</p>
+              <p>*IMPORTANT NOTE: This is the only place where you can copy your AWS secret access key!</p>
+              <p>Copy your access key (see note above), or download the .csv file (which contains both codes) for future use.</p>
+              <br></br>
+              <img src={require("./images/creating_IAM_user_04_Success.jpg")} alt=""></img>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   )
 }

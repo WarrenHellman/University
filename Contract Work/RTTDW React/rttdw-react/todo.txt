@@ -4,3 +4,6 @@ Add fixed breadcrumbs
 Hashrouting for content
 modals
 replace class with classname
+carousel
+clean up indentation
+clean up unused classes/ids
