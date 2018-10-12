@@ -104,7 +104,7 @@ class App extends Component {
         <h1>Hey there handsome!</h1>
         <p className={assignedClasses.join(' ')}>I'm dynamically styled text!</p>
         <button 
-        
+        className = {btnClass}
         onClick={() => this.togglePersonsHandler()}>Toggle Persons</button>
 
         {/* If persons !null, persons will render here */}

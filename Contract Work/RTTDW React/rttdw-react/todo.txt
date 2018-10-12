@@ -1,3 +1,4 @@
 https://reacttraining.com/react-router/web/api/Redirect for routing
 
-add dynamic sidebar
+Add breadcrumbs
+Hashrouting for content

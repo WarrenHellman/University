@@ -442,7 +442,7 @@ const isValidParenthesis = s => {
     let arr = s.split('');
     
     for (let i=0; i<arr.length; i++){
-        console.log("arr[i]: "+arr[i]+", i: "+i+", arr:"+arr)
+        // console.log("arr[i]: "+arr[i]+", i: "+i+", arr:"+arr)
         if (arr[i]===')'||arr[i]==='}'||arr[i]===']'){return false}
         if(arr[i]=='('&&arr[i+1]==')'){
             arr.splice(i,2)
