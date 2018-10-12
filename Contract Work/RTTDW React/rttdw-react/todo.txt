@@ -1,4 +1,6 @@
 https://reacttraining.com/react-router/web/api/Redirect for routing
 
-Add breadcrumbs
+Add fixed breadcrumbs
 Hashrouting for content
+modals
+replace class with classname

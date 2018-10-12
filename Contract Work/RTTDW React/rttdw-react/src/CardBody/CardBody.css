@@ -33,17 +33,41 @@
   padding: 20px 20px;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  color: rgb(155, 148, 148); 
+  background-color: rgb(155, 148, 148); 
+}
+
 .pageBody h4 {
   text-transform: uppercase;
   font-size: 2.3rem;
 }
 
-.pageBody ul {
+.pageBody ul li, .pageBody ol li {
   margin-left: 3%;
 }
 
-.pageBody li {
+.pageBody ul li {
+  list-style-type: none;
+}
+
+.CardBody .pageCard .pageBody ul .openCircleListDecor {
   list-style-type: circle;
+}
+
+.alpha-list li, .unorder-list li, .roman-list li {
+  font-size: 1.4rem;
+  letter-spacing: 1.1px;
+}
+
+.alpha-list {
+  list-style-type: lower-alpha;
+}
+
+.roman-list {
+  list-style-type: lower-roman;
 }
 
 .pageBody h5 {
@@ -80,10 +104,6 @@
   color: #006842;
 }
 
-.decorated {
-  list-style-type: none;
-}
-
 .codeSnippetGitCommand {
   width: 100%;
   display: block;
@@ -97,4 +117,19 @@
   font-weight: 600;
   padding: 1rem 1rem; 
   border: 1px solid black;
+}
+.errorStyle{
+  font-weight: bold; 
+  font-size: 1em;
+}
+
+.pageBody img {
+  width: 100%;
+}
+
+.img-caption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+  color: #424041;
 }
