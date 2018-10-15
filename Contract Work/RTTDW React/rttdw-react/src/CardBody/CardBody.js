@@ -1,5 +1,6 @@
 import React from 'react';
 import './CardBody.css';
+import ModalImage from 'react-modal-image'
 
 
 const CardBody = () => {
@@ -365,7 +366,14 @@ const CardBody = () => {
                           The terminal is in a valid respository/location.  If this is the case, you will see some notifications about the status of that repository and the current status of any tracked/untracked files that have not yet been committed.
                       </p>
                   </li>
-                  <img src={require("./images/git_check_02_git_status_success.jpg")} alt="The successful status"></img>
+                  <ModalImage 
+                    small={require("./images/git_check_02_git_status_success.jpg")} 
+                    large={require("./images/git_check_02_git_status_success.jpg")} 
+                    
+                    // hideZoom='true'
+                    hideDownload='true'>
+                    </ModalImage>
+                  {/* <img src={require("./images/git_check_02_git_status_success.jpg")} alt="The successful status"></img> */}
                   <p class="img-caption">
                       The successful status.
                   </p>
