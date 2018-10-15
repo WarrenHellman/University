@@ -20,7 +20,9 @@
   display: block;
 }
 
-.mainLinkCategory:hover, .mainLinkCategory:active, .subLinkCategory:hover, .subLinkCategory:active {
+.mainLinkCategory:hover, .mainLinkCategory:active, .subLinkCategory:hover, .subLinkCategory:active,
+a:hover,
+a:active {
   color: #027d50;
   cursor: pointer;
 }
@@ -36,4 +38,12 @@
 
 i {
   margin-right: 2%;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
 }

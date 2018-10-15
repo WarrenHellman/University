@@ -9,7 +9,7 @@ const CardBody = () => {
       <div className='breadCrumbs'>
         <p>Home - Main - Getting Started</p>
       </div>
-      <div className='pageCard'>
+      <div id='whoWeAre' className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">What is Recursive Thinking?</h4>
           <hr></hr>
@@ -31,7 +31,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='gettingStarted' className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Getting Started</h4>
           <hr></hr>
@@ -94,7 +94,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='getConnected' className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Get Connected</h4>
             <hr></hr>
@@ -120,7 +120,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='prerequisites' className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Prerequisites</h4>
             <hr></hr>
@@ -175,7 +175,7 @@ const CardBody = () => {
             </p>
         </div>
       </div>
-      <div className='pageCard'>
+      <div id='getTheProject' className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Getting the Project from GitHub</h4>
           <hr></hr>
@@ -327,7 +327,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='contributing' className='pageCard'>
         <div className='pageBody'>
           <h4 class="colorGray42 fw500 ttup">Creating Changes and Additions</h4>
           <hr></hr>
@@ -470,7 +470,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='mergeConflicts' className='pageCard'>
         <div className='pageBody'>
             <h4 class="colorGray42 fw500 ttup">Dealing with Merge Conflicts</h4>
             <hr></hr>
@@ -784,7 +784,7 @@ const CardBody = () => {
         </div>
       </div>
 
-      <div className='pageCard'>
+      <div id='backEndPrereqs' className='pageCard'>
         <div className='pageBody'>
           <h4 class="colorGray42 fw500 ttup">Back End PreRequisites</h4>
           <hr></hr>
@@ -948,7 +948,7 @@ const CardBody = () => {
           </ul>
         </div>
       </div>
-      <div className='pageCard'>
+      <div id='deployBackEnd' className='pageCard'>
           <div className='pageBody'>
             <h4 class="colorGray42 fw500 ttup">Deploy Back End Stack</h4>
             <hr></hr>
@@ -1203,7 +1203,7 @@ const CardBody = () => {
             </div>
           </div>
       </div>
-      <div className='pageCard'>
+      <div id="deployBackend"className='pageCard'>
           <div className='pageBody'>
             <h4 class="colorGray42 fw500 ttup">Deploy Back End- Errors and Solutions</h4>
             <hr></hr>
