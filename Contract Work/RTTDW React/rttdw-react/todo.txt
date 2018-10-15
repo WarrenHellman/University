@@ -2,7 +2,8 @@ https://reacttraining.com/react-router/web/api/Redirect for routing
 
 Add fixed breadcrumbs
 Hashrouting for content
-modals
+modals on images
+show/hide button for big image
 replace class with classname
 carousel
 clean up indentation

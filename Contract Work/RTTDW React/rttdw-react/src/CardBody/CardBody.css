@@ -127,6 +127,9 @@ h6 {
   font-weight: bold; 
   font-size: 1em;
 }
+.red {
+  color: red;
+}
 
 .pageBody img {
   width: 100%;
