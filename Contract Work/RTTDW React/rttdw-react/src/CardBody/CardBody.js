@@ -1,16 +1,18 @@
 import React from 'react';
 import './CardBody.css';
-import ModalImage from 'react-modal-image'
+import Lightbox from '../LightboxPhotos/Lightbox'
 
 
 const CardBody = () => {
   
   return(
     <div className='CardBody'>
-      <div className='breadCrumbs'>
+      {/* <div className='breadCrumbs'>
         <p>Home - Main - Getting Started</p>
-      </div>
-      <div id='whoWeAre' className='pageCard'>
+      </div> */}
+      <div id='whoWeAre'></div>
+      <div className='pageCard'>
+        
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">What is Recursive Thinking?</h4>
           <hr></hr>
@@ -31,8 +33,8 @@ const CardBody = () => {
           </p>
         </div>
       </div>
-
-      <div id='gettingStarted' className='pageCard'>
+      <div id='gettingStarted'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Getting Started</h4>
           <hr></hr>
@@ -94,8 +96,8 @@ const CardBody = () => {
           </ul>
         </div>
       </div>
-
-      <div id='getConnected' className='pageCard'>
+      <div id='getConnected'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Get Connected</h4>
             <hr></hr>
@@ -120,8 +122,8 @@ const CardBody = () => {
           </p>
         </div>
       </div>
-
-      <div id='prerequisites' className='pageCard'>
+      <div id='prerequisites'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Prerequisites</h4>
             <hr></hr>
@@ -176,7 +178,8 @@ const CardBody = () => {
             </p>
         </div>
       </div>
-      <div id='getTheProject' className='pageCard'>
+      <div id='getTheProject'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">Getting the Project from GitHub</h4>
           <hr></hr>
@@ -327,10 +330,10 @@ const CardBody = () => {
           <p>At this point, you will be able to run the front end of the Recursive Thinking website, but you will not be able to log in, as logging in requires the AWS back end. We will cover back end installation later on in the documentation.</p>
         </div>
       </div>
-
-      <div id='contributing' className='pageCard'>
+      <div id='contributing'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
-          <h4 class="colorGray42 fw500 ttup">Creating Changes and Additions</h4>
+          <h4 className="colorGray42 fw500 ttup">Creating Changes and Additions</h4>
           <hr></hr>
           <p>
               Now that you are all set up, you can learn how to do work on the site.
@@ -344,12 +347,12 @@ const CardBody = () => {
               <li>
                     
                   <p>Make sure that the terminal is in the correct project directory, and that project directory is a valid repository.  This can be done by running:</p> 
-                  <p><span class="codeSnippetGitCommand">git status</span></p>
+                  <p><span className="codeSnippetGitCommand">git status</span></p>
                   <p>There are two possible outcomes:</p>
                   
               </li>
 
-              <ol class="alpha-list">
+              <ol className="alpha-list">
                   <li>
                       <p>
                           The terminal is not in a valid repository/location.  If this is the case, you will see the error “<span className='errorStyle'>fatal: Not a git repository (or any of the parent directories): .git</span>”
@@ -358,7 +361,7 @@ const CardBody = () => {
                       </p>
                   </li>
                   <img src={require("./images/git_check_01_git_status_error.jpg")} alt="The fatal status"></img>
-                  <p class="img-caption">
+                  <p className="img-caption">
                       The fatal status.
                   </p>
                   <li>
@@ -366,61 +369,55 @@ const CardBody = () => {
                           The terminal is in a valid respository/location.  If this is the case, you will see some notifications about the status of that repository and the current status of any tracked/untracked files that have not yet been committed.
                       </p>
                   </li>
-                  <ModalImage 
-                    small={require("./images/git_check_02_git_status_success.jpg")} 
-                    large={require("./images/git_check_02_git_status_success.jpg")} 
-                    
-                    // hideZoom='true'
-                    hideDownload='true'>
-                    </ModalImage>
-                  {/* <img src={require("./images/git_check_02_git_status_success.jpg")} alt="The successful status"></img> */}
-                  <p class="img-caption">
+                  
+                  <img src={require("./images/git_check_02_git_status_success.jpg")} alt="The successful status"></img>
+                  <p className="img-caption">
                       The successful status.
                   </p>
               </ol>
               <li>
                   Add untracked files. 
               </li>
-              <ol class="alpha-list">
+              <ol className="alpha-list">
                   <li>
                       <p>
                           If you have created new files or made changes to existing ones, you will need to add your changes.
                       </p>
-                      <ol class="roman-list">
+                      <ol className="roman-list">
                           <li>
                               <p>
                                   First, run the command:
                               </p> 
                               <p>
-                                  <span class="codeSnippetGitCommand">git status</span> 
+                                  <span className="codeSnippetGitCommand">git status</span> 
                               </p>
                               <p>
                                   This is to make sure that you are on the master branch, which reflects the production-ready state. This will also allow you to see what files have not yet been added, as they will appear in red. Added files will appear in green. 
                               </p>
                           </li>
                           <img src={require("./images/committing1.jpg")} alt="The untracked files are displayed in red."></img>
-                          <p class="img-caption">
+                          <p className="img-caption">
                               The untracked files are displayed in red.
                           </p>
                           <li>
                               <p>
                                   To add files, run: 
                               </p>
-                              <p><span class="codeSnippetGitCommand">git add -filename-</span></p>    
+                              <p><span className="codeSnippetGitCommand">git add -filename-</span></p>    
                               <p>For example, if you created or edited a file named “readMe1,” you would add the file by running the command:</p>
-                              <p><span class="codeSnippetGitCommand">git add readME1.md</span>
+                              <p><span className="codeSnippetGitCommand">git add readME1.md</span>
                               </p>
                               <br></br>
                               <img src={require("./images/committing2.jpg")} alt="Add each file (readMe1, readMe2 and readMe3)."></img>
-                              <p class="img-caption">
+                              <p className="img-caption">
                                   Add each file (readMe1, readMe2 and readMe3).
                               </p>
                               <p>
                                   Once added, they will appear green when you run: 
                               </p>
-                              <p><span class="codeSnippetGitCommand">git status</span></p>
+                              <p><span className="codeSnippetGitCommand">git status</span></p>
                               <img src={require("./images/committing3.jpg")} alt="Now that the files have been added, they will appear in green when you check their status."></img>
-                              <p class="img-caption">
+                              <p className="img-caption">
                                   Now that the files have been added, they will appear in green when you check their status.
                               </p>
                           </li>
@@ -431,7 +428,7 @@ const CardBody = () => {
                           When you are ready to commit your changes, you can run the commit command, which includes a mandatory message detailing what action you have taken. Do this by running:
                             
                       </p>
-                      <p><span class="codeSnippetGitCommand">git commit -m “”</span></p>
+                      <p><span className="codeSnippetGitCommand">git commit -m “”</span></p>
                       <p>
                           Inside of the quotation marks, you will type your message details. 
                       </p>
@@ -439,13 +436,13 @@ const CardBody = () => {
                           For example, once you are ready to commit readMe1.md, you would run:
                       </p>
                       <p>
-                          <span class="codeSnippetGitCommand">git commit -m “now I have pushed the files where we have resolved conflicts”</span>
+                          <span className="codeSnippetGitCommand">git commit -m “now I have pushed the files where we have resolved conflicts”</span>
                       </p>
                       <p>
                           You may choose whatever message makes the most sense for your commit.
                       </p>
                       <img src={require("./images/committing4.jpg")} alt="The files have been committed and include a message detailing the action taken."></img>
-                      <p class="img-caption">
+                      <p className="img-caption">
                           The files have been committed and include a message detailing the action taken.
                       </p>
                   </li>
@@ -455,16 +452,16 @@ const CardBody = () => {
                       Push up your changes.
                   </p>
               </li>
-              <ol class="alpha-list">
+              <ol className="alpha-list">
                   <li>
                       <p>
                           To make the final step in pushing your changes to Git, where they will show up in your commit history and in the project directory on GitHub, run:
                       </p>
                       <p>
-                          <span class="codeSnippetGitCommand">git push origin master</span>
+                          <span className="codeSnippetGitCommand">git push origin master</span>
                       </p>
                       <img src={require("./images/committing5.jpg")} alt="The files have been pushed to master."></img>
-                      <p class="img-caption">
+                      <p className="img-caption">
                           The files have been pushed to master.
                       </p>
                   </li>
@@ -477,10 +474,10 @@ const CardBody = () => {
           </ol>
         </div>
       </div>
-
-      <div id='mergeConflicts' className='pageCard'>
+      <div id='mergeConflicts'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Dealing with Merge Conflicts</h4>
+            <h4 className="colorGray42 fw500 ttup">Dealing with Merge Conflicts</h4>
             <hr></hr>
             <p>
               Merge conflicts occur when someone pushes changes to master after another person has pushed changes to that same file to
@@ -494,7 +491,7 @@ const CardBody = () => {
               annotated as “this commit will error when pushed - as the head is one commit further than this local.”
             </p>
             <img src={require("./images/merge1.jpg")} alt="All files have been committed."></img>
-            <p class="img-caption">
+            <p className="img-caption">
               All files have been committed.
             </p>
             <p>
@@ -502,10 +499,10 @@ const CardBody = () => {
               the following command, they encounter an error because of a merge conflict:
             </p>
             <p>
-              <span class="codeSnippetGitCommand">git push origin master</span>
+              <span className="codeSnippetGitCommand">git push origin master</span>
             </p>
             <img src={require("./images/merge2.jpg")} alt="The user encounters a merge conflict, noted by the “! [rejected]” message."></img>
-            <p class="img-caption">
+            <p className="img-caption">
               The user encounters a merge conflict, noted by the “! [rejected]” message.
             </p>
             <p id="tutorial">
@@ -516,14 +513,14 @@ const CardBody = () => {
 
       <div className='pageCard'>
         <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Resolving Conflicts</h4>
+            <h4 className="colorGray42 fw500 ttup">Resolving Conflicts</h4>
             <hr></hr>
             <p>
             Resolve your merge conflict using this 8-step tutorial. Click 'Next' to begin.
             </p>
             <br></br><br></br>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 In order to resolve this conflict, run the following commands:
                 </p>
@@ -531,31 +528,31 @@ const CardBody = () => {
                 1. To download all commits from the remote repository (GitHub) that your local computer
                 does not have, run:
                 </p>
-                <p><span class="codeSnippetGitCommand">git fetch --all</span></p>
+                <p><span className="codeSnippetGitCommand">git fetch --all</span></p>
                 <img src={require("./images/merge3.jpg")} alt="The user should see “Fetching origin” after running the command."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 The user should see “Fetching origin” after running the command.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 2. Now you will need to rebase your local computer to master. This command allows you to walk through all changes (Person
                 A’s and Person B’s) and let you decide which to keep. To do this, run:
                 
                 </p>
                 <p>
-                <span class="codeSnippetGitCommand">git rebase origin/master</span>
+                <span className="codeSnippetGitCommand">git rebase origin/master</span>
                 </p>
                 <img src={require("./images/merge4.jpg")} alt="After running this rebase command, you will see everyone’s changes made to each respective file."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 After running this rebase command, you will see everyone’s changes made to each respective file.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 3. For each file that contains a merge conflict, you will be presented with three options.
                 </p>
@@ -567,18 +564,18 @@ const CardBody = () => {
                 is known as HEAD.)
                 </p>
                 <img src={require("./images/merge5.jpg")} alt="Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge6.jpg")} alt="ReadMe 1: Accept Current Changes (origin) result."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 ReadMe 1: Accept Current Changes (origin) result.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 3.
                 </p>
@@ -591,19 +588,19 @@ const CardBody = () => {
                 </p>
                 <img src={require("./images/merge7.jpg")} alt="Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
                 Local1” as the final changes."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
                 Local1” as the final changes.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge8.jpg")} alt="ReadMe 1: Accept Incoming Changes (local) result."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 ReadMe 1: Accept Incoming Changes (local) result.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 3.
                 </p>
@@ -615,175 +612,175 @@ const CardBody = () => {
                 </p>
                 <img src={require("./images/merge9.jpg")} alt=" Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
                 3 Warren” and “Changes from Local1” as the final changes."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
                 3 Warren” and “Changes from Local1” as the final changes.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge10.jpg")} alt="ReadMe 1: Accept Both Changes (origin and local) result."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 ReadMe 1: Accept Both Changes (origin and local) result.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge11.jpg")} alt="ReadMe 2: Accept Both Changes (origin and local) result."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 ReadMe 2: Accept Both Changes (origin and local) result.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge12.jpg")} alt="ReadMe 3: Accept Both Changes (origin and local) result."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 ReadMe 3: Accept Both Changes (origin and local) result.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 4. To apply your commits, you will first need to add your files. Begin this by running:
                 </p>
                 <p>
-                <span class="codeSnippetGitCommand">git rebase --continue</span>
+                <span className="codeSnippetGitCommand">git rebase --continue</span>
                 </p>
                 <img src={require("./images/merge13.jpg")} alt="The user is shown a message instructing them to add the files."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 The user is shown a message instructing them to add the files.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 5. To see what file changes are untracked, run:
                 </p>
                 <p>
-                <span class="codeSnippetGitCommand">git status</span>
+                <span className="codeSnippetGitCommand">git status</span>
                 </p>
                 <img src={require("./images/merge14.jpg")} alt="Untracked files are noted in red."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Untracked files are noted in red.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 6. For each file, run:
                 </p>
                 <p>
-                <span class="codeSnippetGitCommand">git add
+                <span className="codeSnippetGitCommand">git add
                     -filename-
                 </span>
                 </p>
                 <img src={require("./images/merge15.jpg")} alt="You can add each file individually, or you can add all files using the git add . command."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 You can add each file individually, or you can add all files using the
-                <span class="commentCodeSnippetCommand">git add .</span> command.
+                <span className="commentCodeSnippetCommand">git add .</span> command.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge16.jpg")} alt="Adding ReadMe2."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Adding ReadMe2.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge17.jpg")} alt="Adding ReadMe3."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Adding ReadMe3.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge18.jpg")} alt="Running the
                 git status command shows that all three files have been added successfully, noted in green."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Running the
-                <span class="commentCodeSnippetCommand">git status</span> command shows that all three files have been added successfully, noted in green.
+                <span className="commentCodeSnippetCommand">git status</span> command shows that all three files have been added successfully, noted in green.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 7. Continue the rebase
                 in order to apply your commits by running:
                 </p>
                 <p>
-                <span class="codeSnippetGitCommand">git rebase --continue</span>
+                <span className="codeSnippetGitCommand">git rebase --continue</span>
                 </p>
                 <img src={require("./images/merge19.jpg")} alt="The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
                 head is one commit farther than this local.”"></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
                 head is one commit farther than this local.”
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge20.jpg")} alt="Save ReadMe 1."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Save ReadMe 1.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge21.jpg")} alt="Save ReadMe 2."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Save ReadMe 2.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge22.jpg")} alt="Save ReadMe 3."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Save ReadMe 3.
                 </p>
                 <br></br><br></br>
             </div>
 
-            <div class="mySlides">
+            <div className="mySlides">
                 <p>
                 8. Continue by committing and pushing your changes as usual.
                 </p>
                 <img src={require("./images/merge23.jpg")} alt="Run the
                 git status command."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Run the 
-                <span class="commentCodeSnippetCommand">git status</span> command.
+                <span className="commentCodeSnippetCommand">git status</span> command.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge24.jpg")} alt="Run the
                 git add command for ReadMe 1."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Run the 
-                <span class="commentCodeSnippetCommand">git add</span> command for ReadMe 1.
+                <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 1.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge25.jpg")} alt="Run the
                 git add command for ReadMe 2 and 3."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Run the 
-                <span class="commentCodeSnippetCommand">git add</span> command for ReadMe 2 and 3.
+                <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 2 and 3.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge26.jpg")} alt="Files have been successfully added, noted in green."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Files have been successfully added, noted in green.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge27.jpg")} alt="Run the
                 git commit command."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Run the 
-                <span class="commentCodeSnippetCommand">git commit</span> command.
+                <span className="commentCodeSnippetCommand">git commit</span> command.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge28.jpg")} alt="Run the
                 git push origin master command."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Run the 
-                <span class="commentCodeSnippetCommand">git push origin master</span> command.
+                <span className="commentCodeSnippetCommand">git push origin master</span> command.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge29.jpg")} alt="Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
                 with an error message upon pushing, and the final commit is after the conflicts have been resolved."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
                 with an error message upon pushing, and the final commit is after the conflicts have been resolved.
                 </p>
                 <br></br><br></br>
                 <img src={require("./images/merge30.jpg")} alt="When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                 When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit.
                 </p>
                 <br></br><br></br>
@@ -791,10 +788,10 @@ const CardBody = () => {
                 
         </div>
       </div>
-
-      <div id='backEndPrereqs' className='pageCard'>
+      <div id='backEndPrereqs'></div>
+      <div className='pageCard'>
         <div className='pageBody'>
-          <h4 class="colorGray42 fw500 ttup">Back End PreRequisites</h4>
+          <h4 className="colorGray42 fw500 ttup">Back End PreRequisites</h4>
           <hr></hr>
           <p>
             The following are the back end prerequisites for the Recursive Thinking website.
@@ -803,13 +800,13 @@ const CardBody = () => {
             Install Python 
           </h5>
           <p>
-            Select the version for your OS at <a href="https://www.python.org/" target="/"><span class="linkFormatting">https://www.python.org</span></a>. Our deployment script (deployrtw.py), which runs the Amazon Web Services Command Line Interface (AWS CLI) and processes the template.yml file into different Amazon Web Services, runs on Python.
+            Select the version for your OS at <a href="https://www.python.org/" target="/"><span className="linkFormatting">https://www.python.org</span></a>. Our deployment script (deployrtw.py), which runs the Amazon Web Services Command Line Interface (AWS CLI) and processes the template.yml file into different Amazon Web Services, runs on Python.
           </p>
           <p>
             A quick way to test if you have Python installed is to run the following command in the CLI/terminal:
           </p>
           <p>
-            <span class="codeSnippetGitCommand">python --version</span> 
+            <span className="codeSnippetGitCommand">python --version</span> 
           </p>
           <p>
             If you do not see "Python X.X.X" (where the X's are version/release numbers), then you do not have Python installed. If this is the case, click on the link above to go to the Python Software Foundation's website and download a copy for your version of OS.
@@ -821,14 +818,14 @@ const CardBody = () => {
             Install AWS CLI
           </h5>
           <p>
-            Select the version for your OS at <a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="/"><span class="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/installing.html</span></a>. The deployment script executes AWS CLI commands in order to build the back end stack of component services.
+            Select the version for your OS at <a href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html" target="/"><span className="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/installing.html</span></a>. The deployment script executes AWS CLI commands in order to build the back end stack of component services.
           </p>
           
           <p>
             A quick way to test if you have AWS CLI installed is to run the following command in the CLI/terminal:
           </p>
           <p>
-            <span class="codeSnippetGitCommand">aws --version</span>
+            <span className="codeSnippetGitCommand">aws --version</span>
           </p>
           <p>
             This should return a message with your version, such as:
@@ -838,14 +835,14 @@ const CardBody = () => {
             Create an AWS Account
           </h5>
           <p>
-            Create your account at <a href="https://aws.amazon.com/free/" target="/"><span class="linkFormatting">https://aws.amazon.com/free</span></a>. You will use AWS to create your own back end for the website.
+            Create your account at <a href="https://aws.amazon.com/free/" target="/"><span className="linkFormatting">https://aws.amazon.com/free</span></a>. You will use AWS to create your own back end for the website.
           </p>
           <h5>
             Configure AWS CLI
           </h5>
           
           <p>
-            Once you install AWS CLI, you will need to configure it so that it points to your AWS account. Find the instructions to do this at <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="/"><span class="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html</span></a>.
+            Once you install AWS CLI, you will need to configure it so that it points to your AWS account. Find the instructions to do this at <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html" target="/"><span className="linkFormatting">https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html</span></a>.
           </p>
           <p>
             Please note that there has been some confusion with the instructions regarding Identity and Access Management (IAM) user names. This is addressed in the section "To get the access key ID and secret access key for an IAM user" under step 3 ("Choose your IAM user name"). To cover creating an IAM resource and setting permissions more thoroughly, you will find a step-by-step guide below.
@@ -880,7 +877,7 @@ const CardBody = () => {
                 First, check to see if a valid email is configured in Git by running:
               </p>
               <p>
-                <span class="codeSnippetGitCommand">git config --global user.email</span>
+                <span className="codeSnippetGitCommand">git config --global user.email</span>
               </p>
               <p>
                 What should log to the screen is a properly formatted email address like:
@@ -892,7 +889,7 @@ const CardBody = () => {
                 If you do not see a valid email returned, then set it running:
               </p>
               <p>
-                <span class="codeSnippetGitCommand">git config --global user.email -yourNameHere-@-anEmailServiceProvider-.com"</span>
+                <span className="codeSnippetGitCommand">git config --global user.email -yourNameHere-@-anEmailServiceProvider-.com"</span>
               </p>
               <p>
                 Please note that -yourNameHere- and -anEmailServiceProvider- represent unique information that you provide (braces not included).
@@ -901,7 +898,7 @@ const CardBody = () => {
                 Test this again by running:
               </p>
               <p>
-                <span class="codeSnippetGitCommand">git config --global user.email</span>
+                <span className="codeSnippetGitCommand">git config --global user.email</span>
               </p>
               <p>
                 At this point, you should have a valid email input.
@@ -913,7 +910,7 @@ const CardBody = () => {
 
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 class="colorGray42 fw500 ttup">Creating an IAM Resource and Setting Permissions</h4>
+          <h4 className="colorGray42 fw500 ttup">Creating an IAM Resource and Setting Permissions</h4>
           <hr></hr>
           <ul>
             <li>
@@ -956,13 +953,14 @@ const CardBody = () => {
           </ul>
         </div>
       </div>
-      <div id='deployBackEnd' className='pageCard'>
+      <div id='deployBackEnd'></div>
+      <div className='pageCard'>
           <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Deploy Back End Stack</h4>
+            <h4 className="colorGray42 fw500 ttup">Deploy Back End Stack</h4>
             <hr></hr>
             <p>
               Please make sure that all the prerequisites are properly installed and configured.  If there is any doubt, please review the previous tab, <a href="#gettingStartedBackEndPreRequisites"><span
-                class="linkFormatting">Back End Prerequisites</span></a>.
+                className="linkFormatting">Back End Prerequisites</span></a>.
               <br></br><br></br>
               There are three major components to the back end AWS stack deployment.
             </p>
@@ -974,7 +972,7 @@ const CardBody = () => {
                   <br></br><br></br>
                   In addition to building the AWS stack, the deployrtw.py file also:
                 </p>
-                <ol class="alpha-list">
+                <ol className="alpha-list">
                   <li>
                     <p>
                       Autofills our DynamoDB tables with values, providing default inputs for the skills table.
@@ -997,7 +995,7 @@ const CardBody = () => {
                 <p>
                   This file is a CloudFormation (the Amazon Web Service which will build our stack) template containing the configuration options for all services we will use for our site.  These include:
                 </p>
-                <ol class="alpha-list">
+                <ol className="alpha-list">
                   <li>
                     <p>API Gateway</p> 
                   </li>
@@ -1017,7 +1015,7 @@ const CardBody = () => {
               </li>
               <li>
                 <h6>Supporting files which include:</h6>
-                <ol class="alpha-list">
+                <ol className="alpha-list">
                   <li>
                     <p>
                       Lambdas
@@ -1035,52 +1033,52 @@ const CardBody = () => {
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">CloudFormation Configuration</h4>
+            <h4 className="colorGray42 fw500 ttup">CloudFormation Configuration</h4>
             <hr></hr>
-            <div class="slideshow-container">
-              <div class="mySlides1">
+            <div className="slideshow-container">
+              <div className="mySlides1">
                 <p>
                   Click "Next" to begin a 4-step tutorial to help configure CloudFormation in AWS services. This will help you determine if your stack has been built yet.
                 </p>
               </div>
-              <div class="mySlides1">
+              <div className="mySlides1">
                 <p>
                   1. Log in to your AWS account, and select “CloudFormation” from the list of AWS services.  
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_01a_CloudFormation.jpg")} alt="CloudFormation in the list of AWS services."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   CloudFormation in the list of AWS services.
                 </p>
               </div>
-              <div class="mySlides1">
+              <div className="mySlides1">
                 <p>
                   2. If CloudFormation is not easily visible, just type it into the search bar.
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_01b_CloudFormation_Search.jpg")} alt="CloudFormation appears in the dropdown.
                 "></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   CloudFormation appears in the dropdown.
                 </p>
               </div>
-              <div class="mySlides1">
+              <div className="mySlides1">
                 <p>
                   3. Once in CloudFormation, you will see a list of available stacks. In this case, however, there will be no stacks, because we have not deployed yet.   
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_02_CloudFormation_Stacks.jpg")} alt="No stacks will appear at this time."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   No stacks will appear at this time.
                 </p>
               </div>
-              <div class="mySlides1">
+              <div className="mySlides1">
                 <p>
                   4. At the end of these instructions, expect to see "recursive-thinking-server" as a row on the page. If you see that, you were successful.
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg" )}alt="Recursive-thinking-server is now a stack."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   Recursive-thinking-server is now a stack.
                 </p>
               </div>
@@ -1089,59 +1087,59 @@ const CardBody = () => {
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Deployment Process</h4>
+            <h4 className="colorGray42 fw500 ttup">Deployment Process</h4>
             <hr></hr>
-            <div class="slideshow-container">
-              <div class="mySlides2">
+            <div className="slideshow-container">
+              <div className="mySlides2">
                 <p>
                   Click "Next" to begin a 4-step tutorial on deploying the back end. The tutorial will walk you through running the Python script to build the back end and error troubleshooting.
                 </p>
                 <br></br>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   1. Make sure that you are inside recursive_thinking_server in your terminal/CLI. 
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_03_terminal.jpg")} alt="In recursive_thinking_server."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   In recursive_thinking_server.
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   2. Run the command:
                 </p>
                 <p>
-                  <span class="codeSnippetGitCommand">./deployrtw.py</span>  
+                  <span className="codeSnippetGitCommand">./deployrtw.py</span>  
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_04_deployrtw_py.jpg")} alt="Run: ./deployrtw.py"></img>
-                <p class="img-caption">
-                  Run: <span class="codeSnippetGitCommand">./deployrtw.py</span>
+                <p className="img-caption">
+                  Run: <span className="codeSnippetGitCommand">./deployrtw.py</span>
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   3. Watch the CLI/terminal output.  Make sure that all the commands in the script execute successfully and do not error. 
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_05_deployrtw_py_secrets.jpg")} alt="Successful command execution."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   Successful command execution.
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   4. When all the commands execute successfully, log in to your AWS account again and select CloudFormation.  “recursive-thinking-server” should now be an available stack. Make sure the message reads “CREATE_COMPLETE,” and is green.  A different message, especially one in red, generally indicates an error. Continue the tutorial if the stack is not displaying correctly.
                 </p>
                 <br></br>
                 <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg")} alt="Recursive-thinking-server is now a stack."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   Recursive-thinking-server is now a stack.
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <h5>
                   Stack Creation Errors
                 </h5>
@@ -1150,11 +1148,11 @@ const CardBody = () => {
                 </p>
                 <br></br>
                 <img src={require("./images/where_is_my_stack_00_no_stack.jpg")} alt="The recursive-thinking-server stack does not appear."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   The recursive-thinking-server stack does not appear.
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   AWS has many regions (at the time of writing there are 15 regions worldwide). For the back end stack, it is possible to have the same stack in multiple locations, as the stack has a region identifier in its stack ID.  (This can be seen by clicking the checkbox for a stack, and looking for the stack ID in the Overview tab.)
                 </p>
@@ -1169,22 +1167,22 @@ const CardBody = () => {
                 </p>
                 <br></br>
                 <img src={require("./images/where_is_my_stack_01_aws_stack_regions.jpg")} alt="A list of all AWS regions."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   A list of all AWS regions.
                 </p>
               </div>
-              <div class="mySlides2">
+              <div className="mySlides2">
                 <p>
                   In this dropdown, select the region that corresponds to your .config file setting.  In this case, the user would select “US West (Oregon)” as this option is us-west-2, which is the region specified in this user’s .config file.
                 </p>
                 <p>
                   For more information on region name to region code translation, read <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" target="_blank" rel='noopener noreferrer'><span
-                    class="linkFormatting">this guide</span></a>.
+                    className="linkFormatting">this guide</span></a>.
                 </p>
                 <br></br>
                 <img 
                 src={require("./images/where_is_my_stack_02_aws_stack_correct_region.jpg")} alt="The recursive-thinking-server stack is successfully shown."></img>
-                <p class="img-caption">
+                <p className="img-caption">
                   The recursive-thinking-server stack is successfully shown.
                 </p>
               </div>
@@ -1193,19 +1191,19 @@ const CardBody = () => {
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Deploy Back End- Terminal/CLI Output Breakdown</h4>
+            <h4 className="colorGray42 fw500 ttup">Deploy Back End- Terminal/CLI Output Breakdown</h4>
             <hr></hr>
             <p>
               Below is an image of the current back end deployment, with major blocks highlighted and labeled. This is provided to help as a general understanding of how the script works and its major components.
             </p>
-            <div>
-              <button type='button' class="expand" onclick="expandImg()">Show Image</button>
-            </div>
+            {/* <div>
+              <button type='button' className="expand" onclick="expandImg()">Show Image</button>
+            </div> */}
             
             <br></br>
-            <div id="scriptImg" class="hideImg">
+            <div id="scriptImg" className="hideImg">
               <img src={require("./images/stack_deployment_script_component_breakdown.jpg")} alt="Back end deployment."></img>
-              <p class="img-caption">
+              <p className="img-caption">
                 Back end deployment.
               </p>
             </div>
@@ -1213,7 +1211,7 @@ const CardBody = () => {
       </div>
       <div id="deployBackend"className='pageCard'>
           <div className='pageBody'>
-            <h4 class="colorGray42 fw500 ttup">Deploy Back End- Errors and Solutions</h4>
+            <h4 className="colorGray42 fw500 ttup">Deploy Back End- Errors and Solutions</h4>
             <hr></hr>
             <ol>
               <li>
@@ -1237,7 +1235,7 @@ const CardBody = () => {
                   Check to see if a valid email is configured in Git by running: 
                 </p>
                 <p>
-                  <span class="codeSnippetGitCommand">git config --global user.email</span>
+                  <span className="codeSnippetGitCommand">git config --global user.email</span>
                 </p>
                 <p>
                   What should log to the screen is a properly formatted email address, like: 
@@ -1249,7 +1247,7 @@ const CardBody = () => {
                   If you do not see a valid email returned, then please set it by running: 
                 </p>
                 <p>
-                  <span class="codeSnippetGitCommand">git config --global user.email "{'{'}yourNameHere{'}'}@{'{'}anEmailServiceProvider{'}'}.com"</span>
+                  <span className="codeSnippetGitCommand">git config --global user.email "{'{'}yourNameHere{'}'}@{'{'}anEmailServiceProvider{'}'}.com"</span>
                 </p>
                 <p>
                   Please note that {'{'}yourNameHere{'}'} and {'{'}anEmailServiceProvider{'}'} represent unique information that you provide.  Do not enter these as your actual values.
@@ -1258,7 +1256,7 @@ const CardBody = () => {
                   Test this again by running:
                 </p>
                 <p>
-                  <span class="codeSnippetGitCommand">git config --global user.email</span>
+                  <span className="codeSnippetGitCommand">git config --global user.email</span>
                 </p>
                 <p>
                   At this point, you should have a valid email input.
