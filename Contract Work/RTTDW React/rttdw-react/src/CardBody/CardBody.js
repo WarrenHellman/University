@@ -472,7 +472,315 @@ const CardBody = () => {
 
       <div className='pageCard'>
         <div className='pageBody'>
+            <h4 class="colorGray42 fw500 ttup">Dealing with Merge Conflicts</h4>
+            <hr></hr>
+            <p>
+              Merge conflicts occur when someone pushes changes to master after another person has pushed changes to that same file to
+              master. More specifically, if Person A and Person B start working on the same file and Person A pushes changes
+              to that file, but Person B pushes changes to the same file without rebasing their branch to pick up the changes
+              from Person A’s commit, then you may have a merge conflict.
+            </p>
+            <p>
+              The screenshots below show the local computer, which does not have the most recent changes from master. In this example,
+              Person B has done the git commands mentioned in the previous section (status, add, commit). They made a commit
+              annotated as “this commit will error when pushed - as the head is one commit further than this local.”
+            </p>
+            <img src={require("./images/merge1.jpg")} alt="All files have been committed."></img>
+            <p class="img-caption">
+              All files have been committed.
+            </p>
+            <p>
+              When the user runs
+              the following command, they encounter an error because of a merge conflict:
+            </p>
+            <p>
+              <span class="codeSnippetGitCommand">git push origin master</span>
+            </p>
+            <img src={require("./images/merge2.jpg")} alt="The user encounters a merge conflict, noted by the “! [rejected]” message."></img>
+            <p class="img-caption">
+              The user encounters a merge conflict, noted by the “! [rejected]” message.
+            </p>
+            <p id="tutorial">
+              If you are experiencing a merge conflict, follow the steps below.
+            </p>
+        </div>
+      </div>
 
+      <div className='pageCard'>
+        <div className='pageBody'>
+            <h4 class="colorGray42 fw500 ttup">Resolving Conflicts</h4>
+            <hr></hr>
+            <p>
+            Resolve your merge conflict using this 8-step tutorial. Click 'Next' to begin.
+            </p>
+            <br></br><br></br>
+
+            <div class="mySlides">
+                <p>
+                In order to resolve this conflict, run the following commands:
+                </p>
+                <p>
+                1. To download all commits from the remote repository (GitHub) that your local computer
+                does not have, run:
+                </p>
+                <p><span class="codeSnippetGitCommand">git fetch --all</span></p>
+                <img src={require("./images/merge3.jpg")} alt="The user should see “Fetching origin” after running the command."></img>
+                <p class="img-caption">
+                The user should see “Fetching origin” after running the command.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                2. Now you will need to rebase your local computer to master. This command allows you to walk through all changes (Person
+                A’s and Person B’s) and let you decide which to keep. To do this, run:
+                
+                </p>
+                <p>
+                <span class="codeSnippetGitCommand">git rebase origin/master</span>
+                </p>
+                <img src={require("./images/merge4.jpg")} alt="After running this rebase command, you will see everyone’s changes made to each respective file."></img>
+                <p class="img-caption">
+                After running this rebase command, you will see everyone’s changes made to each respective file.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                3. For each file that contains a merge conflict, you will be presented with three options.
+                </p>
+                <p>
+                Part 1/3- Accept Current Changes
+                </p>
+                <p>
+                This means that you are accepting the changes from origin/master. (This most recent version of a branch, in this case master,
+                is known as HEAD.)
+                </p>
+                <img src={require("./images/merge5.jpg")} alt="Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes."></img>
+                <p class="img-caption">
+                Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge6.jpg")} alt="ReadMe 1: Accept Current Changes (origin) result."></img>
+                <p class="img-caption">
+                ReadMe 1: Accept Current Changes (origin) result.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                3.
+                </p>
+                <p>
+                Part 2/3- Accept Incoming Changes
+                </p>
+                <p>
+                This means you are accepting the changes you have made locally.
+
+                </p>
+                <img src={require("./images/merge7.jpg")} alt="Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
+                Local1” as the final changes."></img>
+                <p class="img-caption">
+                Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
+                Local1” as the final changes.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge8.jpg")} alt="ReadMe 1: Accept Incoming Changes (local) result."></img>
+                <p class="img-caption">
+                ReadMe 1: Accept Incoming Changes (local) result.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                3.
+                </p>
+                <p>
+                Part 3/3- Accept Both Changes
+                </p>
+                <p>
+                This means you are accepting the changes from origin/master and your local changes.
+                </p>
+                <img src={require("./images/merge9.jpg")} alt=" Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
+                3 Warren” and “Changes from Local1” as the final changes."></img>
+                <p class="img-caption">
+                Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
+                3 Warren” and “Changes from Local1” as the final changes.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge10.jpg")} alt="ReadMe 1: Accept Both Changes (origin and local) result."></img>
+                <p class="img-caption">
+                ReadMe 1: Accept Both Changes (origin and local) result.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge11.jpg")} alt="ReadMe 2: Accept Both Changes (origin and local) result."></img>
+                <p class="img-caption">
+                ReadMe 2: Accept Both Changes (origin and local) result.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge12.jpg")} alt="ReadMe 3: Accept Both Changes (origin and local) result."></img>
+                <p class="img-caption">
+                ReadMe 3: Accept Both Changes (origin and local) result.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                4. To apply your commits, you will first need to add your files. Begin this by running:
+                </p>
+                <p>
+                <span class="codeSnippetGitCommand">git rebase --continue</span>
+                </p>
+                <img src={require("./images/merge13.jpg")} alt="The user is shown a message instructing them to add the files."></img>
+                <p class="img-caption">
+                The user is shown a message instructing them to add the files.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                5. To see what file changes are untracked, run:
+                </p>
+                <p>
+                <span class="codeSnippetGitCommand">git status</span>
+                </p>
+                <img src={require("./images/merge14.jpg")} alt="Untracked files are noted in red."></img>
+                <p class="img-caption">
+                Untracked files are noted in red.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                6. For each file, run:
+                </p>
+                <p>
+                <span class="codeSnippetGitCommand">git add
+                    -filename-
+                </span>
+                </p>
+                <img src={require("./images/merge15.jpg")} alt="You can add each file individually, or you can add all files using the git add . command."></img>
+                <p class="img-caption">
+                You can add each file individually, or you can add all files using the
+                <span class="commentCodeSnippetCommand">git add .</span> command.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge16.jpg")} alt="Adding ReadMe2."></img>
+                <p class="img-caption">
+                Adding ReadMe2.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge17.jpg")} alt="Adding ReadMe3."></img>
+                <p class="img-caption">
+                Adding ReadMe3.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge18.jpg")} alt="Running the
+                git status command shows that all three files have been added successfully, noted in green."></img>
+                <p class="img-caption">
+                Running the
+                <span class="commentCodeSnippetCommand">git status</span> command shows that all three files have been added successfully, noted in green.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                7. Continue the rebase
+                in order to apply your commits by running:
+                </p>
+                <p>
+                <span class="codeSnippetGitCommand">git rebase --continue</span>
+                </p>
+                <img src={require("./images/merge19.jpg")} alt="The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
+                head is one commit farther than this local.”"></img>
+                <p class="img-caption">
+                The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
+                head is one commit farther than this local.”
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge20.jpg")} alt="Save ReadMe 1."></img>
+                <p class="img-caption">
+                Save ReadMe 1.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge21.jpg")} alt="Save ReadMe 2."></img>
+                <p class="img-caption">
+                Save ReadMe 2.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge22.jpg")} alt="Save ReadMe 3."></img>
+                <p class="img-caption">
+                Save ReadMe 3.
+                </p>
+                <br></br><br></br>
+            </div>
+
+            <div class="mySlides">
+                <p>
+                8. Continue by committing and pushing your changes as usual.
+                </p>
+                <img src={require("./images/merge23.jpg")} alt="Run the
+                git status command."></img>
+                <p class="img-caption">
+                Run the 
+                <span class="commentCodeSnippetCommand">git status</span> command.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge24.jpg")} alt="Run the
+                git add command for ReadMe 1."></img>
+                <p class="img-caption">
+                Run the 
+                <span class="commentCodeSnippetCommand">git add</span> command for ReadMe 1.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge25.jpg")} alt="Run the
+                git add command for ReadMe 2 and 3."></img>
+                <p class="img-caption">
+                Run the 
+                <span class="commentCodeSnippetCommand">git add</span> command for ReadMe 2 and 3.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge26.jpg")} alt="Files have been successfully added, noted in green."></img>
+                <p class="img-caption">
+                Files have been successfully added, noted in green.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge27.jpg")} alt="Run the
+                git commit command."></img>
+                <p class="img-caption">
+                Run the 
+                <span class="commentCodeSnippetCommand">git commit</span> command.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge28.jpg")} alt="Run the
+                git push origin master command."></img>
+                <p class="img-caption">
+                Run the 
+                <span class="commentCodeSnippetCommand">git push origin master</span> command.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge29.jpg")} alt="Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
+                with an error message upon pushing, and the final commit is after the conflicts have been resolved."></img>
+                <p class="img-caption">
+                Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
+                with an error message upon pushing, and the final commit is after the conflicts have been resolved.
+                </p>
+                <br></br><br></br>
+                <img src={require("./images/merge30.jpg")} alt="When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit."></img>
+                <p class="img-caption">
+                When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit.
+                </p>
+                <br></br><br></br>
+            </div>
+                
         </div>
       </div>
 

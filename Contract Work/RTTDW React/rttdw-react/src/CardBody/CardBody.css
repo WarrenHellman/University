@@ -45,6 +45,10 @@ hr {
   font-size: 2.3rem;
 }
 
+h6 {
+  font-weight: bold;
+}
+
 .pageBody ul li, .pageBody ol li {
   margin-left: 3%;
 }
@@ -117,6 +121,7 @@ hr {
   font-weight: 600;
   padding: 1rem 1rem; 
   border: 1px solid black;
+  margin-left: 3px;
 }
 .errorStyle{
   font-weight: bold; 
@@ -130,6 +135,6 @@ hr {
 .img-caption {
   text-align: center;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 9px;
   color: #424041;
 }
