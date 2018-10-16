@@ -461,4 +461,49 @@ const isValidParenthesis = s => {
     return true;
 }
 
-console.log(isValidParenthesis('(()[{}]{})'))
+// console.log(isValidParenthesis('(()[{}]{})'))
+
+function stringMath(str){
+    let expression=[];
+    let number=0;
+    let operators = {
+        '+':43,
+        '-':45,
+        '*':42,
+        '/':47
+    }
+    let split = str.split('')
+    for (let i=0; i<split.length; i++){
+        
+        if (isNaN(split[i])){
+            expression.push(number)
+            expression.push(split[i])
+            number=0
+        }
+        else{
+            number+=split[i]
+        }
+    }
+    expression.push(number)
+    let answer=Number(expression[0]);
+    for (let j=0; j<expression.length; j++){
+        switch (expression[j]){
+            case '+':
+                answer+=Number(expression[j+1]);
+                break;
+            case '-':
+                answer-=Number(expression[j+1]);
+                break;
+            case '*':
+                answer*=Number(expression[j+1]);
+                break;
+            case '/':
+                answer/=Number(expression[j+1]);
+                break;
+        }
+    }
+    return answer
+    
+} 
+//caveat, ignores pemdas
+console.log(stringMath('33+3-4/4'))
