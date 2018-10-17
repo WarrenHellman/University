@@ -1,6 +1,5 @@
 import React from 'react';
 import './CardBody.css';
-import Lightbox from '../LightboxPhotos/Lightbox'
 
 
 const CardBody = () => {
@@ -16,10 +15,7 @@ const CardBody = () => {
         <div className='pageBody'>
           <h4 className="colorGray42 fw500 ttup">What is Recursive Thinking?</h4>
           <hr></hr>
-          <Lightbox
-            imageIndex={0}/>
-          <Lightbox
-            imageIndex={1}/>
+          
           <p>
               Recursive Thinking (RT) is a collective of people dedicated to career development in the technology space. In order to learn from others, members needed a website to showcase their skillsets to establish connections in and out of RT meetings. As a way to build skills, developers, designers and technical writers work on the website together.
           </p>

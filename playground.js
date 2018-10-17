@@ -511,7 +511,49 @@ function stringMath(str){
 
 // zero out everything up and down from a zero position. Try to do it in as few passes with least memory
 function zeroOut(arr){
+    let blankArr=[];
+    let refObj ={
+        line:[],
+    }
 
+    for(let p=0; p<arr.length; p++){
+        for (let c=0; c<arr[0].length; c++){
+            // checks all of the values for 0s and records their sub array index and array index
+            if (arr[p][c]===0){
+                refObj.line.push(p);
+            }
+            //when it gets to the end of the child array it checks to see if it is a line that needs replacing with a blank array
+            else if (c===arr[0].length-1&&refObj.line[refObj.line.length-1]===p){
+                // Checks if blank array has already been made
+                if (blankArr.length>0){
+                    arr[p]=blankArr;
+                }
+                // creates a blank array for substitution
+                else{
+                    for (let i=0; i<arr[0].length; i++){
+                        blankArr[i]=0
+                    }
+                    arr[p]=blankArr;
+                }
+                
+            }
+        }
+    }
+    // for(let p=0; p<arr.length; p++){
+    //     for (let c=0; c<arr[0].length; c++){
+    //         if (arr[p][c]===0){
+    //             let val = c
+    //             for(let q=0; q<arr.length; q++){
+    //                 arr[q][val]=0;
+    //             }
+                
+    //         }
+    //     }
+    // }
+    
+    
+    console.log("arr:",arr);
+    console.log(refObj)
 }
 
 let arr = [
