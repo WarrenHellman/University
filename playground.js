@@ -506,4 +506,18 @@ function stringMath(str){
     
 } 
 //caveat, ignores pemdas
-console.log(stringMath('33+3-4/4'))
+// console.log(stringMath('33+3-4/4'))
+
+
+// zero out everything up and down from a zero position. Try to do it in as few passes with least memory
+function zeroOut(arr){
+
+}
+
+let arr = [
+    [1,4,0,3],
+    [3,1,5,9],
+    [0,5,2,8],
+    [1,3,3,8]
+]
+zeroOut(arr)
