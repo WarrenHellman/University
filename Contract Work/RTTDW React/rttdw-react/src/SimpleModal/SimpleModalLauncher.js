@@ -30,13 +30,14 @@ class SimpleModalLauncher extends Component {
 
     return (
       <div>
-        <button
-          type="button"
-          className='modalButton'
+        <img
+          src={require("./committing1.jpg")}
+          alt="img"
+          // className='modalButton'
           onClick={() => this.handleToggleModal()}
         >
-          Open Modal
-        </button>
+          
+        </img>
 
         {showModal &&
           <SimpleModal onCloseRequest={() => this.handleToggleModal()}>

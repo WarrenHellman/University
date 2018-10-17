@@ -1,6 +1,7 @@
 import React from 'react';
 import './CardBody.css';
 import SimpleModalLauncher from '../SimpleModal/SimpleModalLauncher'
+
 // import PropTypes from 'prop-types';
 // import injectSheet from 'react-jss';
 // import styles from './CardBodyStyles'
@@ -20,8 +21,7 @@ const CardBody = () => {
       </div> */}
       <div id='whoWeAre'></div>
       <div className='pageCard'>
-        <SimpleModalLauncher
-          buttonLabel="The Modal"/>
+        {/* <SimpleModalLauncher/> */}
         <div className='pageBody'>
           <h4 >What is Recursive Thinking?</h4>
           <hr></hr>
@@ -244,7 +244,7 @@ const CardBody = () => {
                   <p>
                       <a className="linkFormatting" href="https://github.com/RecursiveThinking/recursive_thinking_website.git" target="_blank" alt='' rel='noopener noreferrer'>https://github.com/RecursiveThinking/recursive_thinking_website.git</a>
                   </p>
-                  <img id="test-modal" className="imgModal" src={require("./images/git-clone.jpg")} alt="Click the green “Clone or download” button to find the website URL."></img>
+                  <img src={require("./images/git-clone.jpg")} alt="Click the green “Clone or download” button to find the website URL."></img>
                   <p className="img-caption">
                       Click the green “Clone or download” button to find the website URL.
                   </p>
@@ -514,7 +514,7 @@ const CardBody = () => {
             <p className="img-caption">
               The user encounters a merge conflict, noted by the “! [rejected]” message.
             </p>
-            <p id="tutorial">
+            <p>
               If you are experiencing a merge conflict, follow the steps below.
             </p>
         </div>
@@ -1183,12 +1183,9 @@ const CardBody = () => {
             <p>
               Below is an image of the current back end deployment, with major blocks highlighted and labeled. This is provided to help as a general understanding of how the script works and its major components.
             </p>
-            <div>
-              {/* <button type='button' className="expand" onClick="expandImg()">Show Image</button> */}
-            </div>
             
             <br></br>
-            <div id="scriptImg" className="hideImg">
+            <div>
               <img src={require("./images/stack_deployment_script_component_breakdown.jpg")} alt="Back end deployment."></img>
               <p className="img-caption">
                 Back end deployment.
