@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import styles from './SimpleModalLauncherStyles'; // Import styles
-import SimpleModal from '../SimpleModal/SimpleModal'; // Import SimpleModal component
+import SimpleModal from './SimpleModal'; // Import SimpleModal component
+import PropTypes from 'prop-types';
 
 // Declaration of the component as React Class Component
 class SimpleModalLauncher extends Component {
@@ -44,5 +45,15 @@ class SimpleModalLauncher extends Component {
     );
   }
 }
+
+SimpleModalLauncher.propTypes = {
+  buttonLabel: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  sheet: PropTypes.object,
+  classes: PropTypes.object,
+};
 
 export default injectSheet(styles)(SimpleModalLauncher);

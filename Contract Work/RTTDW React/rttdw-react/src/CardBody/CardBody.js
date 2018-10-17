@@ -1,9 +1,18 @@
 import React from 'react';
 import './CardBody.css';
+// import SimpleModalLauncher from '../SimpleModal/SimpleModalLauncher'
+import PropTypes from 'prop-types';
+import injectSheet from 'react-jss';
+import styles from './CardBodyStyles'
+
 
 
 const CardBody = () => {
-  
+// const CardBody = ({ sheet: { classes } }) => {
+  CardBody.propTypes = {
+    sheet: PropTypes.object,
+    classes: PropTypes.object
+  };
   return(
     <div className='CardBody'>
       {/* <div className='breadCrumbs'>
@@ -11,9 +20,10 @@ const CardBody = () => {
       </div> */}
       <div id='whoWeAre'></div>
       <div className='pageCard'>
-        
+        {/* <SimpleModalLauncher
+          buttonLabel="The Modal"/> */}
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">What is Recursive Thinking?</h4>
+          <h4 >What is Recursive Thinking?</h4>
           <hr></hr>
           
           <p>
@@ -36,7 +46,7 @@ const CardBody = () => {
       <div id='gettingStarted'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Getting Started</h4>
+          <h4>Getting Started</h4>
           <hr></hr>
           <p>
               Before you begin, you will need to have a few tools to work on the site. Make sure you have the ones listed in the section below.
@@ -99,33 +109,32 @@ const CardBody = () => {
       <div id='getConnected'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Get Connected</h4>
+          <h4>Get Connected</h4>
             <hr></hr>
             <h5>Join Recursive Thinking on Slack</h5>
+            <a href="https://recursivethinking.slack.com" target="/"><span className="linkFormatting">Slack</span></a>
             <p>
-              <a href="https://recursivethinking.slack.com" target="/"><span className="linkFormatting">Slack</span></a>
-              <p>
-                  Use this link to join the Recursive Thinking Slack group. Slack is a collaborative message platform where RT members share news, schedule meetup dates and ask and answer questions. If you do not have an account, you will need to create one. Please talk to Hailey Skelcher or Austin Nevins at Dev Day to be invited to join our channel.
-              </p>
+                Use this link to join the Recursive Thinking Slack group. Slack is a collaborative message platform where RT members share news, schedule meetup dates and ask and answer questions. If you do not have an account, you will need to create one. Please talk to Hailey Skelcher or Austin Nevins at Dev Day to be invited to join our channel.
             </p>
+            
             <h5>Join Recursive Thinking on GitHub</h5>
+
+            <a href="https://github.com/RecursiveThinking" target="/"><span className="linkFormatting">GitHub</span></a>
             <p>
-              <a href="https://github.com/RecursiveThinking" target="/"><span className="linkFormatting">GitHub</span></a>
-              <p>
-                  Use this link to access the Recursive Thinking GitHub page, which you will need in order to contribute to the website. If you do not have a GitHub account, you will need to create one. Please talk to Hailey Skelcher or Austin Nevins at Dev Day to be invited to the group page.
-              </p>
+                Use this link to access the Recursive Thinking GitHub page, which you will need in order to contribute to the website. If you do not have a GitHub account, you will need to create one. Please talk to Hailey Skelcher or Austin Nevins at Dev Day to be invited to the group page.
             </p>
+
             <h5>Access Site Mockups</h5>
-            <p>
-              <a href="https://app.zeplin.io/project/5a35b3271068e9760ef79fc6" target="/"><span className="linkFormatting">Zeplin</span></a>
-              <p>Use this link to access Zeplin, a collaborative platform for designers and developers. You will need to sign up to use the web app (or version of your choice). Contact Hailey Skelcher at Dev Day to get invited to see the mockups for this project.</p>
-          </p>
+
+            <a href="https://app.zeplin.io/project/5a35b3271068e9760ef79fc6" target="/"><span className="linkFormatting">Zeplin</span></a>
+            <p>Use this link to access Zeplin, a collaborative platform for designers and developers. You will need to sign up to use the web app (or version of your choice). Contact Hailey Skelcher at Dev Day to get invited to see the mockups for this project.</p>
+
         </div>
       </div>
       <div id='prerequisites'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Prerequisites</h4>
+          <h4>Prerequisites</h4>
             <hr></hr>
             <p>
               To be able to view and make changes to this project, you will need to install some tools.
@@ -181,7 +190,7 @@ const CardBody = () => {
       <div id='getTheProject'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Getting the Project from GitHub</h4>
+          <h4>Getting the Project from GitHub</h4>
           <hr></hr>
           <p>
               To work on the Recursive Thinking website project, you will need to transfer the project files from the RT GitHub repository to your computer. This is done through a git clone.
@@ -333,7 +342,7 @@ const CardBody = () => {
       <div id='contributing'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Creating Changes and Additions</h4>
+          <h4>Creating Changes and Additions</h4>
           <hr></hr>
           <p>
               Now that you are all set up, you can learn how to do work on the site.
@@ -477,7 +486,7 @@ const CardBody = () => {
       <div id='mergeConflicts'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Dealing with Merge Conflicts</h4>
+            <h4>Dealing with Merge Conflicts</h4>
             <hr></hr>
             <p>
               Merge conflicts occur when someone pushes changes to master after another person has pushed changes to that same file to
@@ -513,285 +522,276 @@ const CardBody = () => {
 
       <div className='pageCard'>
         <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Resolving Conflicts</h4>
-            <hr></hr>
-            <p>
-            Resolve your merge conflict using this 8-step tutorial. Click 'Next' to begin.
-            </p>
-            <br></br><br></br>
+          <h4>Resolving Conflicts</h4>
+          <hr></hr>
+          <p>
+          Follow this 8-step tutorial to resolve your merge conflicts.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                In order to resolve this conflict, run the following commands:
-                </p>
-                <p>
-                1. To download all commits from the remote repository (GitHub) that your local computer
-                does not have, run:
-                </p>
-                <p><span className="codeSnippetGitCommand">git fetch --all</span></p>
-                <img src={require("./images/merge3.jpg")} alt="The user should see “Fetching origin” after running the command."></img>
-                <p className="img-caption">
-                The user should see “Fetching origin” after running the command.
-                </p>
-                <br></br><br></br>
-            </div>
 
-            <div className="mySlides">
-                <p>
-                2. Now you will need to rebase your local computer to master. This command allows you to walk through all changes (Person
-                A’s and Person B’s) and let you decide which to keep. To do this, run:
-                
-                </p>
-                <p>
-                <span className="codeSnippetGitCommand">git rebase origin/master</span>
-                </p>
-                <img src={require("./images/merge4.jpg")} alt="After running this rebase command, you will see everyone’s changes made to each respective file."></img>
-                <p className="img-caption">
-                After running this rebase command, you will see everyone’s changes made to each respective file.
-                </p>
-                <br></br><br></br>
-            </div>
+          <p>
+          In order to resolve this conflict, run the following commands:
+          </p>
+          <p>
+          1. To download all commits from the remote repository (GitHub) that your local computer
+          does not have, run:
+          </p>
+          <p><span className="codeSnippetGitCommand">git fetch --all</span></p>
+          <img src={require("./images/merge3.jpg")} alt="The user should see “Fetching origin” after running the command."></img>
+          <p className="img-caption">
+          The user should see “Fetching origin” after running the command.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                3. For each file that contains a merge conflict, you will be presented with three options.
-                </p>
-                <p>
-                Part 1/3- Accept Current Changes
-                </p>
-                <p>
-                This means that you are accepting the changes from origin/master. (This most recent version of a branch, in this case master,
-                is known as HEAD.)
-                </p>
-                <img src={require("./images/merge5.jpg")} alt="Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes."></img>
-                <p className="img-caption">
-                Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge6.jpg")} alt="ReadMe 1: Accept Current Changes (origin) result."></img>
-                <p className="img-caption">
-                ReadMe 1: Accept Current Changes (origin) result.
-                </p>
-                <br></br><br></br>
-            </div>
 
-            <div className="mySlides">
-                <p>
-                3.
-                </p>
-                <p>
-                Part 2/3- Accept Incoming Changes
-                </p>
-                <p>
-                This means you are accepting the changes you have made locally.
+          
+          <p>
+          2. Now you will need to rebase your local computer to master. This command allows you to walk through all changes (Person
+          A’s and Person B’s) and let you decide which to keep. To do this, run:
+          
+          </p>
+          <p>
+          <span className="codeSnippetGitCommand">git rebase origin/master</span>
+          </p>
+          <img src={require("./images/merge4.jpg")} alt="After running this rebase command, you will see everyone’s changes made to each respective file."></img>
+          <p className="img-caption">
+          After running this rebase command, you will see everyone’s changes made to each respective file.
+          </p>
+          <br></br><br></br>
+          
+          <p>
+          3. For each file that contains a merge conflict, you will be presented with three options.
+          </p>
+          <p>
+          Part 1/3- Accept Current Changes
+          </p>
+          <p>
+          This means that you are accepting the changes from origin/master. (This most recent version of a branch, in this case master,
+          is known as HEAD.)
+          </p>
+          <img src={require("./images/merge5.jpg")} alt="Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes."></img>
+          <p className="img-caption">
+          Accepting current changes, or HEAD, would mean the user chooses to accept “readme 3 Warren” as the final changes.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge6.jpg")} alt="ReadMe 1: Accept Current Changes (origin) result."></img>
+          <p className="img-caption">
+          ReadMe 1: Accept Current Changes (origin) result.
+          </p>
+          <br></br><br></br>
 
-                </p>
-                <img src={require("./images/merge7.jpg")} alt="Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
-                Local1” as the final changes."></img>
-                <p className="img-caption">
-                Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
-                Local1” as the final changes.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge8.jpg")} alt="ReadMe 1: Accept Incoming Changes (local) result."></img>
-                <p className="img-caption">
-                ReadMe 1: Accept Incoming Changes (local) result.
-                </p>
-                <br></br><br></br>
-            </div>
 
-            <div className="mySlides">
-                <p>
-                3.
-                </p>
-                <p>
-                Part 3/3- Accept Both Changes
-                </p>
-                <p>
-                This means you are accepting the changes from origin/master and your local changes.
-                </p>
-                <img src={require("./images/merge9.jpg")} alt=" Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
-                3 Warren” and “Changes from Local1” as the final changes."></img>
-                <p className="img-caption">
-                Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
-                3 Warren” and “Changes from Local1” as the final changes.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge10.jpg")} alt="ReadMe 1: Accept Both Changes (origin and local) result."></img>
-                <p className="img-caption">
-                ReadMe 1: Accept Both Changes (origin and local) result.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge11.jpg")} alt="ReadMe 2: Accept Both Changes (origin and local) result."></img>
-                <p className="img-caption">
-                ReadMe 2: Accept Both Changes (origin and local) result.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge12.jpg")} alt="ReadMe 3: Accept Both Changes (origin and local) result."></img>
-                <p className="img-caption">
-                ReadMe 3: Accept Both Changes (origin and local) result.
-                </p>
-                <br></br><br></br>
-            </div>
+            
+          <p>
+          3.
+          </p>
+          <p>
+          Part 2/3- Accept Incoming Changes
+          </p>
+          <p>
+          This means you are accepting the changes you have made locally.
 
-            <div className="mySlides">
-                <p>
-                4. To apply your commits, you will first need to add your files. Begin this by running:
-                </p>
-                <p>
-                <span className="codeSnippetGitCommand">git rebase --continue</span>
-                </p>
-                <img src={require("./images/merge13.jpg")} alt="The user is shown a message instructing them to add the files."></img>
-                <p className="img-caption">
-                The user is shown a message instructing them to add the files.
-                </p>
-                <br></br><br></br>
-            </div>
+          </p>
+          <img src={require("./images/merge7.jpg")} alt="Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
+          Local1” as the final changes."></img>
+          <p className="img-caption">
+          Accepting incoming changes, or the changes from your local computer, would mean the user chooses to accept “Changes from
+          Local1” as the final changes.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge8.jpg")} alt="ReadMe 1: Accept Incoming Changes (local) result."></img>
+          <p className="img-caption">
+          ReadMe 1: Accept Incoming Changes (local) result.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                5. To see what file changes are untracked, run:
-                </p>
-                <p>
-                <span className="codeSnippetGitCommand">git status</span>
-                </p>
-                <img src={require("./images/merge14.jpg")} alt="Untracked files are noted in red."></img>
-                <p className="img-caption">
-                Untracked files are noted in red.
-                </p>
-                <br></br><br></br>
-            </div>
+        
+          <p>
+          3.
+          </p>
+          <p>
+          Part 3/3- Accept Both Changes
+          </p>
+          <p>
+          This means you are accepting the changes from origin/master and your local changes.
+          </p>
+          <img src={require("./images/merge9.jpg")} alt=" Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
+          3 Warren” and “Changes from Local1” as the final changes."></img>
+          <p className="img-caption">
+          Accepting both changes, or the changes from your local computer and from master, would mean the user chooses to accept “readme
+          3 Warren” and “Changes from Local1” as the final changes.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge10.jpg")} alt="ReadMe 1: Accept Both Changes (origin and local) result."></img>
+          <p className="img-caption">
+          ReadMe 1: Accept Both Changes (origin and local) result.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge11.jpg")} alt="ReadMe 2: Accept Both Changes (origin and local) result."></img>
+          <p className="img-caption">
+          ReadMe 2: Accept Both Changes (origin and local) result.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge12.jpg")} alt="ReadMe 3: Accept Both Changes (origin and local) result."></img>
+          <p className="img-caption">
+          ReadMe 3: Accept Both Changes (origin and local) result.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                6. For each file, run:
-                </p>
-                <p>
-                <span className="codeSnippetGitCommand">git add
-                    -filename-
-                </span>
-                </p>
-                <img src={require("./images/merge15.jpg")} alt="You can add each file individually, or you can add all files using the git add . command."></img>
-                <p className="img-caption">
-                You can add each file individually, or you can add all files using the
-                <span className="commentCodeSnippetCommand">git add .</span> command.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge16.jpg")} alt="Adding ReadMe2."></img>
-                <p className="img-caption">
-                Adding ReadMe2.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge17.jpg")} alt="Adding ReadMe3."></img>
-                <p className="img-caption">
-                Adding ReadMe3.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge18.jpg")} alt="Running the
-                git status command shows that all three files have been added successfully, noted in green."></img>
-                <p className="img-caption">
-                Running the
-                <span className="commentCodeSnippetCommand">git status</span> command shows that all three files have been added successfully, noted in green.
-                </p>
-                <br></br><br></br>
-            </div>
+        
+          <p>
+          4. To apply your commits, you will first need to add your files. Begin this by running:
+          </p>
+          <p>
+          <span className="codeSnippetGitCommand">git rebase --continue</span>
+          </p>
+          <img src={require("./images/merge13.jpg")} alt="The user is shown a message instructing them to add the files."></img>
+          <p className="img-caption">
+          The user is shown a message instructing them to add the files.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                7. Continue the rebase
-                in order to apply your commits by running:
-                </p>
-                <p>
-                <span className="codeSnippetGitCommand">git rebase --continue</span>
-                </p>
-                <img src={require("./images/merge19.jpg")} alt="The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
-                head is one commit farther than this local.”"></img>
-                <p className="img-caption">
-                The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
-                head is one commit farther than this local.”
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge20.jpg")} alt="Save ReadMe 1."></img>
-                <p className="img-caption">
-                Save ReadMe 1.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge21.jpg")} alt="Save ReadMe 2."></img>
-                <p className="img-caption">
-                Save ReadMe 2.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge22.jpg")} alt="Save ReadMe 3."></img>
-                <p className="img-caption">
-                Save ReadMe 3.
-                </p>
-                <br></br><br></br>
-            </div>
+      
+          <p>
+          5. To see what file changes are untracked, run:
+          </p>
+          <p>
+          <span className="codeSnippetGitCommand">git status</span>
+          </p>
+          <img src={require("./images/merge14.jpg")} alt="Untracked files are noted in red."></img>
+          <p className="img-caption">
+          Untracked files are noted in red.
+          </p>
+          <br></br><br></br>
 
-            <div className="mySlides">
-                <p>
-                8. Continue by committing and pushing your changes as usual.
-                </p>
-                <img src={require("./images/merge23.jpg")} alt="Run the
-                git status command."></img>
-                <p className="img-caption">
-                Run the 
-                <span className="commentCodeSnippetCommand">git status</span> command.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge24.jpg")} alt="Run the
-                git add command for ReadMe 1."></img>
-                <p className="img-caption">
-                Run the 
-                <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 1.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge25.jpg")} alt="Run the
-                git add command for ReadMe 2 and 3."></img>
-                <p className="img-caption">
-                Run the 
-                <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 2 and 3.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge26.jpg")} alt="Files have been successfully added, noted in green."></img>
-                <p className="img-caption">
-                Files have been successfully added, noted in green.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge27.jpg")} alt="Run the
-                git commit command."></img>
-                <p className="img-caption">
-                Run the 
-                <span className="commentCodeSnippetCommand">git commit</span> command.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge28.jpg")} alt="Run the
-                git push origin master command."></img>
-                <p className="img-caption">
-                Run the 
-                <span className="commentCodeSnippetCommand">git push origin master</span> command.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge29.jpg")} alt="Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
-                with an error message upon pushing, and the final commit is after the conflicts have been resolved."></img>
-                <p className="img-caption">
-                Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
-                with an error message upon pushing, and the final commit is after the conflicts have been resolved.
-                </p>
-                <br></br><br></br>
-                <img src={require("./images/merge30.jpg")} alt="When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit."></img>
-                <p className="img-caption">
-                When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit.
-                </p>
-                <br></br><br></br>
-            </div>
+
+        
+          <p>
+          6. For each file, run:
+          </p>
+          <p>
+          <span className="codeSnippetGitCommand">git add
+              -filename-
+          </span>
+          </p>
+          <img src={require("./images/merge15.jpg")} alt="You can add each file individually, or you can add all files using the git add . command."></img>
+          <p className="img-caption">
+          You can add each file individually, or you can add all files using the
+          <span className="commentCodeSnippetCommand">git add .</span> command.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge16.jpg")} alt="Adding ReadMe2."></img>
+          <p className="img-caption">
+          Adding ReadMe2.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge17.jpg")} alt="Adding ReadMe3."></img>
+          <p className="img-caption">
+          Adding ReadMe3.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge18.jpg")} alt="Running the
+          git status command shows that all three files have been added successfully, noted in green."></img>
+          <p className="img-caption">
+          Running the
+          <span className="commentCodeSnippetCommand">git status</span> command shows that all three files have been added successfully, noted in green.
+          </p>
+          <br></br><br></br>
+
+      
+          <p>
+          7. Continue the rebase
+          in order to apply your commits by running:
+          </p>
+          <p>
+          <span className="codeSnippetGitCommand">git rebase --continue</span>
+          </p>
+          <img src={require("./images/merge19.jpg")} alt="The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
+          head is one commit farther than this local.”"></img>
+          <p className="img-caption">
+          The original commit is being pushed, noted with the user’s original message “this commit will error when pushed - as the
+          head is one commit farther than this local.”
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge20.jpg")} alt="Save ReadMe 1."></img>
+          <p className="img-caption">
+          Save ReadMe 1.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge21.jpg")} alt="Save ReadMe 2."></img>
+          <p className="img-caption">
+          Save ReadMe 2.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge22.jpg")} alt="Save ReadMe 3."></img>
+          <p className="img-caption">
+          Save ReadMe 3.
+          </p>
+          <br></br><br></br>
+        
+          <p>
+          8. Continue by committing and pushing your changes as usual.
+          </p>
+          <img src={require("./images/merge23.jpg")} alt="Run the
+          git status command."></img>
+          <p className="img-caption">
+          Run the 
+          <span className="commentCodeSnippetCommand">git status</span> command.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge24.jpg")} alt="Run the
+          git add command for ReadMe 1."></img>
+          <p className="img-caption">
+          Run the 
+          <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 1.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge25.jpg")} alt="Run the
+          git add command for ReadMe 2 and 3."></img>
+          <p className="img-caption">
+          Run the 
+          <span className="commentCodeSnippetCommand">git add</span> command for ReadMe 2 and 3.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge26.jpg")} alt="Files have been successfully added, noted in green."></img>
+          <p className="img-caption">
+          Files have been successfully added, noted in green.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge27.jpg")} alt="Run the
+          git commit command."></img>
+          <p className="img-caption">
+          Run the 
+          <span className="commentCodeSnippetCommand">git commit</span> command.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge28.jpg")} alt="Run the
+          git push origin master command."></img>
+          <p className="img-caption">
+          Run the 
+          <span className="commentCodeSnippetCommand">git push origin master</span> command.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge29.jpg")} alt="Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
+          with an error message upon pushing, and the final commit is after the conflicts have been resolved."></img>
+          <p className="img-caption">
+          Here is the commit history. The second commit is where the conflict occurs, the third commit is where the user is presented
+          with an error message upon pushing, and the final commit is after the conflicts have been resolved.
+          </p>
+          <br></br><br></br>
+          <img src={require("./images/merge30.jpg")} alt="When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit."></img>
+          <p className="img-caption">
+          When you click on a commit, you can see what changes have been accepted. This visual shows the code of the final commit.
+          </p>
+          <br></br><br></br>
                 
         </div>
       </div>
       <div id='backEndPrereqs'></div>
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Back End PreRequisites</h4>
+          <h4>Back End PreRequisites</h4>
           <hr></hr>
           <p>
             The following are the back end prerequisites for the Recursive Thinking website.
@@ -910,7 +910,7 @@ const CardBody = () => {
 
       <div className='pageCard'>
         <div className='pageBody'>
-          <h4 className="colorGray42 fw500 ttup">Creating an IAM Resource and Setting Permissions</h4>
+          <h4>Creating an IAM Resource and Setting Permissions</h4>
           <hr></hr>
           <ul>
             <li>
@@ -956,7 +956,7 @@ const CardBody = () => {
       <div id='deployBackEnd'></div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Deploy Back End Stack</h4>
+            <h4>Deploy Back End Stack</h4>
             <hr></hr>
             <p>
               Please make sure that all the prerequisites are properly installed and configured.  If there is any doubt, please review the previous tab, <a href="#gettingStartedBackEndPreRequisites"><span
@@ -1033,172 +1033,159 @@ const CardBody = () => {
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">CloudFormation Configuration</h4>
+            <h4>CloudFormation Configuration</h4>
             <hr></hr>
-            <div className="slideshow-container">
-              <div className="mySlides1">
-                <p>
-                  Click "Next" to begin a 4-step tutorial to help configure CloudFormation in AWS services. This will help you determine if your stack has been built yet.
-                </p>
-              </div>
-              <div className="mySlides1">
-                <p>
-                  1. Log in to your AWS account, and select “CloudFormation” from the list of AWS services.  
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_01a_CloudFormation.jpg")} alt="CloudFormation in the list of AWS services."></img>
-                <p className="img-caption">
-                  CloudFormation in the list of AWS services.
-                </p>
-              </div>
-              <div className="mySlides1">
-                <p>
-                  2. If CloudFormation is not easily visible, just type it into the search bar.
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_01b_CloudFormation_Search.jpg")} alt="CloudFormation appears in the dropdown.
-                "></img>
-                <p className="img-caption">
-                  CloudFormation appears in the dropdown.
-                </p>
-              </div>
-              <div className="mySlides1">
-                <p>
-                  3. Once in CloudFormation, you will see a list of available stacks. In this case, however, there will be no stacks, because we have not deployed yet.   
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_02_CloudFormation_Stacks.jpg")} alt="No stacks will appear at this time."></img>
-                <p className="img-caption">
-                  No stacks will appear at this time.
-                </p>
-              </div>
-              <div className="mySlides1">
-                <p>
-                  4. At the end of these instructions, expect to see "recursive-thinking-server" as a row on the page. If you see that, you were successful.
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg" )}alt="Recursive-thinking-server is now a stack."></img>
-                <p className="img-caption">
-                  Recursive-thinking-server is now a stack.
-                </p>
-              </div>
-          </div>
+
+            <p>
+              Follow this 4-step tutorial to help configure CloudFormation in AWS services. This will help you determine if your stack has been built yet.
+            </p>
+
+
+            <p>
+              1. Log in to your AWS account, and select “CloudFormation” from the list of AWS services.  
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_01a_CloudFormation.jpg")} alt="CloudFormation in the list of AWS services."></img>
+            <p className="img-caption">
+              CloudFormation in the list of AWS services.
+            </p>
+              
+            <p>
+              2. If CloudFormation is not easily visible, just type it into the search bar.
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_01b_CloudFormation_Search.jpg")} alt="CloudFormation appears in the dropdown.
+            "></img>
+            <p className="img-caption">
+              CloudFormation appears in the dropdown.
+            </p>
+
+            <p>
+              3. Once in CloudFormation, you will see a list of available stacks. In this case, however, there will be no stacks, because we have not deployed yet.   
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_02_CloudFormation_Stacks.jpg")} alt="No stacks will appear at this time."></img>
+            <p className="img-caption">
+              No stacks will appear at this time.
+            </p>
+              
+              <p>
+                4. At the end of these instructions, expect to see "recursive-thinking-server" as a row on the page. If you see that, you were successful.
+              </p>
+              <br></br>
+              <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg" )}alt="Recursive-thinking-server is now a stack."></img>
+              <p className="img-caption">
+                Recursive-thinking-server is now a stack.
+              </p>
+
       </div>
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Deployment Process</h4>
+            <h4>Deployment Process</h4>
             <hr></hr>
-            <div className="slideshow-container">
-              <div className="mySlides2">
-                <p>
-                  Click "Next" to begin a 4-step tutorial on deploying the back end. The tutorial will walk you through running the Python script to build the back end and error troubleshooting.
-                </p>
-                <br></br>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  1. Make sure that you are inside recursive_thinking_server in your terminal/CLI. 
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_03_terminal.jpg")} alt="In recursive_thinking_server."></img>
-                <p className="img-caption">
-                  In recursive_thinking_server.
-                </p>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  2. Run the command:
-                </p>
-                <p>
-                  <span className="codeSnippetGitCommand">./deployrtw.py</span>  
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_04_deployrtw_py.jpg")} alt="Run: ./deployrtw.py"></img>
-                <p className="img-caption">
-                  Run: <span className="codeSnippetGitCommand">./deployrtw.py</span>
-                </p>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  3. Watch the CLI/terminal output.  Make sure that all the commands in the script execute successfully and do not error. 
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_05_deployrtw_py_secrets.jpg")} alt="Successful command execution."></img>
-                <p className="img-caption">
-                  Successful command execution.
-                </p>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  4. When all the commands execute successfully, log in to your AWS account again and select CloudFormation.  “recursive-thinking-server” should now be an available stack. Make sure the message reads “CREATE_COMPLETE,” and is green.  A different message, especially one in red, generally indicates an error. Continue the tutorial if the stack is not displaying correctly.
-                </p>
-                <br></br>
-                <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg")} alt="Recursive-thinking-server is now a stack."></img>
-                <p className="img-caption">
-                  Recursive-thinking-server is now a stack.
-                </p>
-              </div>
-              <div className="mySlides2">
-                <h5>
-                  Stack Creation Errors
-                </h5>
-                <p>
-                  You may go through the entire setup process above, run the script, receive a message that says “Successfully created/updated stack - recursive-thinking-server” in your terminal, but when you go to the AWS CloudFormation console, the stack does not appear. Read below to successfully find the stack.
-                </p>
-                <br></br>
-                <img src={require("./images/where_is_my_stack_00_no_stack.jpg")} alt="The recursive-thinking-server stack does not appear."></img>
-                <p className="img-caption">
-                  The recursive-thinking-server stack does not appear.
-                </p>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  AWS has many regions (at the time of writing there are 15 regions worldwide). For the back end stack, it is possible to have the same stack in multiple locations, as the stack has a region identifier in its stack ID.  (This can be seen by clicking the checkbox for a stack, and looking for the stack ID in the Overview tab.)
-                </p>
-                <p>
-                  The AWS region where the stack gets published to is held in the .config file created during the AWS CLI configuration steps. If the current AWS CLI profile is set to a default region of us-west-2, then the stack is going to be in the CloudFormation console for just that AWS region.
-                </p>
-                <p>
-                  The problem here is that when you first create an AWS account, it always defaults to AWS region us-east-1.
-                </p>
-                <p>
-                  To fix this, if you know your stack was created successfully, and you know what AWS region is specified in your .config file, go the CloudFormation console, and click on the dropdown menu button that is second from the right. Clicking this button will reveal a dropdown of all AWS regions.
-                </p>
-                <br></br>
-                <img src={require("./images/where_is_my_stack_01_aws_stack_regions.jpg")} alt="A list of all AWS regions."></img>
-                <p className="img-caption">
-                  A list of all AWS regions.
-                </p>
-              </div>
-              <div className="mySlides2">
-                <p>
-                  In this dropdown, select the region that corresponds to your .config file setting.  In this case, the user would select “US West (Oregon)” as this option is us-west-2, which is the region specified in this user’s .config file.
-                </p>
-                <p>
-                  For more information on region name to region code translation, read <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" target="_blank" rel='noopener noreferrer'><span
-                    className="linkFormatting">this guide</span></a>.
-                </p>
-                <br></br>
-                <img 
-                src={require("./images/where_is_my_stack_02_aws_stack_correct_region.jpg")} alt="The recursive-thinking-server stack is successfully shown."></img>
-                <p className="img-caption">
-                  The recursive-thinking-server stack is successfully shown.
-                </p>
-              </div>
-          </div>
+           
+            <p>
+              Follow this 4-step tutorial on deploying the back end. The tutorial will walk you through running the Python script to build the back end and error troubleshooting.
+            </p>
+            <br></br>
+        
+            <p>
+              1. Make sure that you are inside recursive_thinking_server in your terminal/CLI. 
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_03_terminal.jpg")} alt="In recursive_thinking_server."></img>
+            <p className="img-caption">
+              In recursive_thinking_server.
+            </p>
+              
+            <p>
+              2. Run the command:
+            </p>
+            <p>
+              <span className="codeSnippetGitCommand">./deployrtw.py</span>  
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_04_deployrtw_py.jpg")} alt="Run: ./deployrtw.py"></img>
+            <p className="img-caption">
+              Run: <span className="codeSnippetGitCommand">./deployrtw.py</span>
+            </p>
+
+            <p>
+              3. Watch the CLI/terminal output.  Make sure that all the commands in the script execute successfully and do not error. 
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_05_deployrtw_py_secrets.jpg")} alt="Successful command execution."></img>
+            <p className="img-caption">
+              Successful command execution.
+            </p>
+              
+            <p>
+              4. When all the commands execute successfully, log in to your AWS account again and select CloudFormation.  “recursive-thinking-server” should now be an available stack. Make sure the message reads “CREATE_COMPLETE,” and is green.  A different message, especially one in red, generally indicates an error. Continue the tutorial if the stack is not displaying correctly.
+            </p>
+            <br></br>
+            <img src={require("./images/stack_deployment_06_CloudFormation_Stacks_Success.jpg")} alt="Recursive-thinking-server is now a stack."></img>
+            <p className="img-caption">
+              Recursive-thinking-server is now a stack.
+            </p>
+          
+            <h5>
+              Stack Creation Errors
+            </h5>
+            <p>
+              You may go through the entire setup process above, run the script, receive a message that says “Successfully created/updated stack - recursive-thinking-server” in your terminal, but when you go to the AWS CloudFormation console, the stack does not appear. Read below to successfully find the stack.
+            </p>
+            <br></br>
+            <img src={require("./images/where_is_my_stack_00_no_stack.jpg")} alt="The recursive-thinking-server stack does not appear."></img>
+            <p className="img-caption">
+              The recursive-thinking-server stack does not appear.
+            </p>
+              
+            <p>
+              AWS has many regions (at the time of writing there are 15 regions worldwide). For the back end stack, it is possible to have the same stack in multiple locations, as the stack has a region identifier in its stack ID.  (This can be seen by clicking the checkbox for a stack, and looking for the stack ID in the Overview tab.)
+            </p>
+            <p>
+              The AWS region where the stack gets published to is held in the .config file created during the AWS CLI configuration steps. If the current AWS CLI profile is set to a default region of us-west-2, then the stack is going to be in the CloudFormation console for just that AWS region.
+            </p>
+            <p>
+              The problem here is that when you first create an AWS account, it always defaults to AWS region us-east-1.
+            </p>
+            <p>
+              To fix this, if you know your stack was created successfully, and you know what AWS region is specified in your .config file, go the CloudFormation console, and click on the dropdown menu button that is second from the right. Clicking this button will reveal a dropdown of all AWS regions.
+            </p>
+            <br></br>
+            <img src={require("./images/where_is_my_stack_01_aws_stack_regions.jpg")} alt="A list of all AWS regions."></img>
+            <p className="img-caption">
+              A list of all AWS regions.
+            </p>
+              
+            <p>
+              In this dropdown, select the region that corresponds to your .config file setting.  In this case, the user would select “US West (Oregon)” as this option is us-west-2, which is the region specified in this user’s .config file.
+            </p>
+            <p>
+              For more information on region name to region code translation, read <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" target="_blank" rel='noopener noreferrer'><span
+                className="linkFormatting">this guide</span></a>.
+            </p>
+            <br></br>
+            <img 
+            src={require("./images/where_is_my_stack_02_aws_stack_correct_region.jpg")} alt="The recursive-thinking-server stack is successfully shown."></img>
+            <p className="img-caption">
+              The recursive-thinking-server stack is successfully shown.
+            </p>
+
+
       </div>
       </div>
       <div className='pageCard'>
           <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Deploy Back End- Terminal/CLI Output Breakdown</h4>
+            <h4>Deploy Back End- Terminal/CLI Output Breakdown</h4>
             <hr></hr>
             <p>
               Below is an image of the current back end deployment, with major blocks highlighted and labeled. This is provided to help as a general understanding of how the script works and its major components.
             </p>
-            {/* <div>
+            <div>
               <button type='button' className="expand" onclick="expandImg()">Show Image</button>
-            </div> */}
+            </div>
             
             <br></br>
             <div id="scriptImg" className="hideImg">
@@ -1211,7 +1198,7 @@ const CardBody = () => {
       </div>
       <div id="deployBackend"className='pageCard'>
           <div className='pageBody'>
-            <h4 className="colorGray42 fw500 ttup">Deploy Back End- Errors and Solutions</h4>
+            <h4>Deploy Back End- Errors and Solutions</h4>
             <hr></hr>
             <ol>
               <li>
@@ -1273,4 +1260,8 @@ const CardBody = () => {
   )
 }
 
-export default CardBody;
+
+
+
+const StyledCardBody = injectSheet(styles)(CardBody);
+export default StyledCardBody;

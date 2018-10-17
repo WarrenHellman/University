@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import injectSheet from 'react-jss';
 import isNil from 'lodash/fp/isNil';
 import styles from './SimpleModalStyles'; // Import styles
+import PropTypes from 'prop-types';
 
 // Declaration of the component as React Class Component
 class SimpleModal extends Component {
@@ -80,6 +81,16 @@ class SimpleModal extends Component {
     );
   }
 }
+
+SimpleModal.propTypes = {
+  onCloseRequest: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  sheet: PropTypes.object,
+  classes: PropTypes.object,
+};
 
 // Export the component to use it in other components.
 export default injectSheet(styles)(SimpleModal);
