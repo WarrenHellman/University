@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import injectSheet from 'react-jss';
-import styles from './SimpleModalLauncherStyles'; // Import styles
+// import injectSheet from 'react-jss';
+// import styles from './SimpleModalLauncherStyles'; // Import styles
 import SimpleModal from './SimpleModal'; // Import SimpleModal component
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import './SimpleModalLauncher.css'
 
 // Declaration of the component as React Class Component
 class SimpleModalLauncher extends Component {
@@ -24,14 +25,14 @@ class SimpleModalLauncher extends Component {
   }
 
   render() {
-    const { sheet: { classes } } = this.props;
+    // const { sheet: { classes } } = this.props;
     const { showModal } = this.state;
 
     return (
       <div>
         <button
           type="button"
-          className={classes.modalButton}
+          className='modalButton'
           onClick={() => this.handleToggleModal()}
         >
           Open Modal
@@ -39,21 +40,21 @@ class SimpleModalLauncher extends Component {
 
         {showModal &&
           <SimpleModal onCloseRequest={() => this.handleToggleModal()}>
-            <img src="https://placeimg.com/900/650/nature" alt="Nature" />
+            <img src={require("./committing1.jpg")} alt="Nature" />
           </SimpleModal>}
       </div>
     );
   }
 }
 
-SimpleModalLauncher.propTypes = {
-  buttonLabel: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  sheet: PropTypes.object,
-  classes: PropTypes.object,
-};
+// SimpleModalLauncher.propTypes = {
+//   buttonLabel: PropTypes.string.isRequired,
+//   children: PropTypes.oneOfType([
+//     PropTypes.arrayOf(PropTypes.node),
+//     PropTypes.node,
+//   ]),
+//   sheet: PropTypes.object,
+//   classes: PropTypes.object,
+// };
 
-export default injectSheet(styles)(SimpleModalLauncher);
+export default SimpleModalLauncher

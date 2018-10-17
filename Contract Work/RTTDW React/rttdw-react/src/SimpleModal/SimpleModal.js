@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import injectSheet from 'react-jss';
+// import injectSheet from 'react-jss';
 import isNil from 'lodash/fp/isNil';
-import styles from './SimpleModalStyles'; // Import styles
-import PropTypes from 'prop-types';
+import './SimpleModal.css'
+// import styles from './SimpleModalStyles'; // Import styles
+// import PropTypes from 'prop-types';
 
 // Declaration of the component as React Class Component
 class SimpleModal extends Component {
@@ -57,24 +58,24 @@ class SimpleModal extends Component {
   render () {
     const {
       onCloseRequest,
-      children,
-      sheet: { classes },
+      children
+      // sheet: { classes },
     } = this.props;
     
     return (
-      <div className={classes.modalOverlay}>
+      <div className="modalOverlay">
         <div
-          className={classes.modal}
+          className="modal"
           ref={node => (this.modal = node)}
         >
-          <div className={classes.modalContent}>
+          <div className="modalContent">
             {children}
           </div>
         </div>
 
         <button
           type="button"
-          className={classes.closeButton}
+          className="closeButton"
           onClick={onCloseRequest}
         />
       </div>
@@ -82,15 +83,15 @@ class SimpleModal extends Component {
   }
 }
 
-SimpleModal.propTypes = {
-  onCloseRequest: PropTypes.func,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  sheet: PropTypes.object,
-  classes: PropTypes.object,
-};
+// SimpleModal.propTypes = {
+//   onCloseRequest: PropTypes.func,
+//   children: PropTypes.oneOfType([
+//     PropTypes.arrayOf(PropTypes.node),
+//     PropTypes.node,
+//   ]),
+//   sheet: PropTypes.object,
+//   classes: PropTypes.object,
+// };
 
 // Export the component to use it in other components.
-export default injectSheet(styles)(SimpleModal);
+export default SimpleModal;

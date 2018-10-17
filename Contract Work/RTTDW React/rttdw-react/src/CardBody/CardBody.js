@@ -1,18 +1,18 @@
 import React from 'react';
 import './CardBody.css';
-// import SimpleModalLauncher from '../SimpleModal/SimpleModalLauncher'
-import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
-import styles from './CardBodyStyles'
+import SimpleModalLauncher from '../SimpleModal/SimpleModalLauncher'
+// import PropTypes from 'prop-types';
+// import injectSheet from 'react-jss';
+// import styles from './CardBodyStyles'
 
 
 
 const CardBody = () => {
 // const CardBody = ({ sheet: { classes } }) => {
-  CardBody.propTypes = {
-    sheet: PropTypes.object,
-    classes: PropTypes.object
-  };
+  // CardBody.propTypes = {
+  //   sheet: PropTypes.object,
+  //   classes: PropTypes.object
+  // };
   return(
     <div className='CardBody'>
       {/* <div className='breadCrumbs'>
@@ -20,8 +20,8 @@ const CardBody = () => {
       </div> */}
       <div id='whoWeAre'></div>
       <div className='pageCard'>
-        {/* <SimpleModalLauncher
-          buttonLabel="The Modal"/> */}
+        <SimpleModalLauncher
+          buttonLabel="The Modal"/>
         <div className='pageBody'>
           <h4 >What is Recursive Thinking?</h4>
           <hr></hr>
@@ -1184,7 +1184,7 @@ const CardBody = () => {
               Below is an image of the current back end deployment, with major blocks highlighted and labeled. This is provided to help as a general understanding of how the script works and its major components.
             </p>
             <div>
-              <button type='button' className="expand" onclick="expandImg()">Show Image</button>
+              {/* <button type='button' className="expand" onClick="expandImg()">Show Image</button> */}
             </div>
             
             <br></br>
@@ -1261,7 +1261,4 @@ const CardBody = () => {
 }
 
 
-
-
-const StyledCardBody = injectSheet(styles)(CardBody);
-export default StyledCardBody;
+export default CardBody;
