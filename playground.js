@@ -562,4 +562,26 @@ let arr = [
     [0,5,2,8],
     [1,3,3,8]
 ]
-zeroOut(arr)
+// zeroOut(arr)
+
+
+//returns true or false if integer is a palindrome
+function isIntPalindrome(int) {
+    if (int<0){return false}
+    let intStr = String(int);
+    let length = intStr.length;
+    let count;
+
+    if (length%2===1){
+        count=Math.floor(length/2)
+    }
+    else {count=length/2}
+    for (let i=0; i<=count;i++){
+        if (intStr[i]!==intStr[intStr.length-1-i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isIntPalindrome(-12121))
