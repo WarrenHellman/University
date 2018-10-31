@@ -591,11 +591,7 @@ let half1 = [1, 2, 3, 4]
 let half2 = [5, 6, 7, 8]
 
 function didItRiffle(deck, half1, half2){
-    // console.log(deck.length)
-    // if (deck.length === 0) {
-    //     console.log('no more cards in deck, 1 riffle')
-    //     return true;
-    // }
+    // The constant splicing adds a lot more time complexity. It's better to keep track of the index for each half as a variable and pass that in the function. 
     if (deck[0]===half1[0]){
         deck.splice(0,1);
         half1.splice(0,1)
@@ -620,5 +616,41 @@ function didItRiffle(deck, half1, half2){
     };
 }
 
-console.log(didItRiffle(deck, half1, half2))
+// console.log(didItRiffle(deck, half1, half2))
 
+class LinkedListNode {
+
+constructor( value){
+    this.value = value
+    this.next  = null;
+}
+    
+
+}
+let a = new LinkedListNode("Angel Food")
+let b = new LinkedListNode("Bundt")
+let c = new LinkedListNode("Cheese")
+let d = new LinkedListNode("Devil's Food")
+let e = new LinkedListNode("Eccles")
+
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+
+function kthLast(k, head){
+    let rangeFinder = head;
+    while (k>1) {
+        rangeFinder = rangeFinder.next;
+        k--;
+    }
+    let returnNode = head;
+    while (rangeFinder.next!==null){
+        returnNode = returnNode.next;
+        rangeFinder = rangeFinder.next;
+    }
+    return returnNode
+}
+
+
+console.log(kthLast(2, a))
