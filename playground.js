@@ -584,4 +584,41 @@ function isIntPalindrome(int) {
     return true;
 }
 
-console.log(isIntPalindrome(-12121))
+// console.log(isIntPalindrome(-12121))
+
+let deck = [1,7,2,6,3,5,8,4]
+let half1 = [1, 2, 3, 4]
+let half2 = [5, 6, 7, 8]
+
+function didItRiffle(deck, half1, half2){
+    // console.log(deck.length)
+    // if (deck.length === 0) {
+    //     console.log('no more cards in deck, 1 riffle')
+    //     return true;
+    // }
+    if (deck[0]===half1[0]){
+        deck.splice(0,1);
+        half1.splice(0,1)
+        if (deck.length ===0){
+            console.log('no more cards in deck, 1 riffle')
+            return true;
+        }
+        return didItRiffle(deck, half1, half2)
+    }
+    else if (deck[0]===half2[0]){
+        deck.splice(0,1);
+        half2.splice(0,1)
+        if (deck.length ===0){
+            console.log('no more cards in deck, 1 riffle')
+            return true;
+        }
+        return didItRiffle(deck, half1, half2)
+    }
+    else {
+        console.log('more than a single riffle detected')
+        return false
+    };
+}
+
+console.log(didItRiffle(deck, half1, half2))
+
