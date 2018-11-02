@@ -13,7 +13,6 @@
   justify-content: space-around;
   border-top: 3px solid #555;
   border-bottom: 3px solid #555;
-  z-index: 10000;
 }
 
 .main-nav-1 li {
@@ -27,6 +26,7 @@
   color: #555;
   padding: 8px 0px;
   text-decoration: none;
+  font-weight: 600;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   -webkit-transition: border-bottom 0.2s;
@@ -34,7 +34,7 @@
 }
 .main-nav-1 li a:hover,
 .main-nav-1 li a:active {
-  font-size: 110%;
+  color: rgb(36, 30, 30);
   border-bottom: 2px solid #078646;
 }
 
@@ -50,6 +50,7 @@
 .main-nav-2 li a:visited {
   color: #555;
   padding: 8px 0px;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
@@ -58,7 +59,7 @@
 }
 .main-nav-2 li a:hover,
 .main-nav-2 li a:active {
-  font-size: 110%;
+  color: rgb(36, 30, 30);
   border-bottom: 2px solid #078646;
 }
 /* Want the logo to dip down a little into the top of the page */
