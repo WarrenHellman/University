@@ -1,5 +1,7 @@
+
 .flex-container {
   display:flex;
+  position: fixed;
   width: 100%;
   /* centers all margins instead of typing out instructions for each margin directions */
   margin: 0 auto;

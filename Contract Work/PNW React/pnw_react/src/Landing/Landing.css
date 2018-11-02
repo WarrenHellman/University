@@ -1,0 +1,32 @@
+.landingBackground {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(../images/interested-elk.png);
+  /* fits image to the space */
+  background-size: cover;
+  /* auto adjusts positioning dynamically */
+  background-position: center;
+  /* sets height to 100% of the viewport image */
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+
+
+h2 span {
+  color:red;
+}
+
+.landing-text h1 {
+  font-size: 400%;
+  color: white;
+} 
+.landing-text img {
+  margin-top: 25%;
+  width: 60%;
+  height: auto;
+}
+
+.landing-text h2 {
+  font-size: 300%;
+  color: white;
+  margin-left: 2%;
+} 
