@@ -653,4 +653,25 @@ function kthLast(k, head){
 }
 
 
-console.log(kthLast(2, a))
+// console.log(kthLast(2, a))
+
+
+let otherIDNum = 1
+let count ={}
+
+function clicked(id) {
+    if (!count[id]){
+        count[id]=0;
+    }
+    console.log(count)
+    count[id]+=1;
+    document.getElementById(id).innerText = 'I have been clicked '+count[id]+' times';
+    let node = document.createElement('button')
+    node.setAttribute('type', 'button');
+    node.setAttribute('id', 'button'+otherIDNum)
+    otherIDNum ++;
+    node.setAttribute('onclick','clicked(this.id)')
+    let textNode = document.createTextNode('I have been clicked 0 times')
+    node.appendChild(textNode);
+    document.getElementById('container').appendChild(node);
+}
