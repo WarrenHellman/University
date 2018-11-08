@@ -108,7 +108,7 @@ class About extends Component {
                 We didn't have a few million so that is out (darn!). The local breweries in the northwest don't currently have the room to brew our beer and maintain the price. We would have to raise the six pack price by a few dollars that's no good! In short, to use the recipe we wanted and keep our price low, we currently have to use WI. However as we get bigger, we will be able to use a brewery that is much closer but that will take a little time! 
             </p>
             <p id="about-mission" className="about-hide">
-                We are committed to donating a healthy portion of our proceeds to a rotating list of environmental and conservation non-profits in each state that we operate. We are currently in support of state chapters of the <a href="www.sierraclub.org"><span className="sierra-link">Sierra Club</span></a>.
+                We are committed to donating a healthy portion of our proceeds to a rotating list of environmental and conservation non-profits in each state that we operate. We are currently in support of state chapters of the <a href="https://www.sierraclub.org" target='_blank' rel="noopener noreferrer"><span className="sierra-link">Sierra Club</span></a>.
             </p>
             <p></p>
           </div>
