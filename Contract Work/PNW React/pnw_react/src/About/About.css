@@ -4,6 +4,11 @@
   margin-top: 100px;
 }
 
+.about-text {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .about-tabs {
   display: flex;
   justify-content: space-around;
@@ -69,12 +74,16 @@
 
 }
 
-.sierra-link {
+#about-mission a span {
   color: #078646;
 }
 
-.about-mission a {
+#about-mission a:link {
   text-decoration: none;
+}
+
+#about-mission a span:hover {
+  color: #0e5833;
 }
 
 .about-hide {
@@ -84,6 +93,12 @@
 .bottom-container {
   display: flex;
   flex-direction: column;
+}
+
+hr {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
 }
 
 button {

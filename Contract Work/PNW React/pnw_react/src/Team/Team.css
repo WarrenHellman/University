@@ -1,0 +1,11 @@
+.team-members {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.warren {
+  text-align: center;
+}

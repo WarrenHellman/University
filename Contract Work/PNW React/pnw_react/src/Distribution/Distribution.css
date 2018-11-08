@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------- */
+/* ---------AVAILABILITY---------------- */
+/* ------------------------------------------------------------------------- */
+
+.Distribution {
+  /* temp color */
+  background-color: rgb(187, 187, 187);
+}
+
+.availability-header-container {
+  display: grid;
+  justify-items: center;
+}
+.availability-map {
+  margin-top: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.availability-map img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #078646;
+  border-radius: 4px;
+}

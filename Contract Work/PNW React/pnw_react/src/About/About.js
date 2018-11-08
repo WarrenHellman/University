@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import './About.css';
 
 class About extends Component {
-  story(){
+  
+    story(){
     
     // Can't define a global variable?
     
     // Defines variables for different text sections in about. Removes previous text if it is displayed
-    var story = document.getElementById("about-story");    
-    var brewing = document.getElementById("about-brewing");
-    var mission = document.getElementById("about-mission");
+    const story = document.getElementById("about-story");    
+    const brewing = document.getElementById("about-brewing");
+    const mission = document.getElementById("about-mission");
 
     if (!brewing.classList.contains("about-hide")){
         brewing.classList.toggle("about-hide");
@@ -75,7 +76,7 @@ class About extends Component {
     breweryTab.classList.remove("underline-tab")
     missionTab.classList.toggle("underline-tab")
   }
-  
+
   render() {
     return (
       <div className="About">
@@ -87,6 +88,7 @@ class About extends Component {
             <a id="brewing-tab" onClick={this.brewing}>Our Brewing</a>
             <a id="mission-tab" onClick={this.mission}>Our Mission</a> */}
         </div> 
+        <hr></hr>
         <div>
           <div id="about" className="about-text">
             <p id="about-story">
@@ -108,6 +110,7 @@ class About extends Component {
             <p id="about-mission" className="about-hide">
                 We are committed to donating a healthy portion of our proceeds to a rotating list of environmental and conservation non-profits in each state that we operate. We are currently in support of state chapters of the <a href="www.sierraclub.org"><span className="sierra-link">Sierra Club</span></a>.
             </p>
+            <p></p>
           </div>
             
         </div>   

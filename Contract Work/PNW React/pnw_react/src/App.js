@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Header/Header'
 import Landing from './Landing/Landing'
 import About from './About/About'
+import Distribution from './Distribution/Distribution'
+import Team from './Team/Team'
 
 class App extends Component {
   render() {
@@ -11,6 +13,8 @@ class App extends Component {
         <Header/>
         <Landing/>
         <About/>
+        <Distribution/>
+        <Team/>
       </div>
     );
   }
