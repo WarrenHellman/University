@@ -1,0 +1,99 @@
+.About {
+  background-color: #fffefe;
+  min-height: 90vh;
+  margin-top: 100px;
+}
+
+.about-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-size: 140%;
+  text-transform: uppercase;
+}
+.about-tabs button {
+  border-bottom: 2px solid transparent;
+}
+
+.about-tabs button:active,
+.about-tabs button:hover {
+  border-bottom: 2px solid #078646;
+  cursor: pointer;
+}
+
+.about-tabs button:first-child {
+  margin-left: 15%;
+}
+.about-tabs button:last-child {
+  margin-right: 15%;
+}
+
+.underline-tab {
+  border-bottom: 2px solid #078646 !important;
+}
+
+.about h2 {
+  margin-left: 20%;
+  margin-right: auto;
+  color: #555
+
+}
+
+.about p {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 50px;
+  color: #555;
+  line-height: 155%;
+  text-rendering: optimizeLegibility;
+}
+
+.about h3 {
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 200%;
+  text-align: center;
+}
+.abv {
+  margin-left: 44%;
+  margin-right: auto;
+  font-size: 150%;
+  margin-top: 30px;
+  color: #078646;
+}
+
+.about-thanks {
+  margin-left: 27%;
+  margin-right: 25%;
+  margin-top: 30px;
+
+}
+
+.sierra-link {
+  color: #078646;
+}
+
+.about-mission a {
+  text-decoration: none;
+}
+
+.about-hide {
+  display: none;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background:none!important;
+    color:inherit;
+    border:none; 
+    padding:0!important;
+    font: inherit;
+    /*border is optional*/
+    cursor: pointer;
+}
+
+button:focus {outline:0;}
