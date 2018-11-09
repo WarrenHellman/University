@@ -15,18 +15,18 @@ class Distribution extends Component {
         <div class="availability-map">
             {/* <!-- https://mapchart.net/usa.html --> */}
             <img src={require('../images/distro-map.png')} alt="distro-map"></img>
-            <map name="infographic">
-              <area shape="poly" coords="130,147,200,107,254,219,130,228"
-                href="https://developer.mozilla.org/docs/Web/HTML"
-                target="_blank" alt="HTML" />
-              <area shape="poly" coords="130,147,130,228,6,219,59,107"
-                href="https://developer.mozilla.org/docs/Web/CSS"
-                target="_blank" alt="CSS" />
-              <area shape="poly" coords="130,147,200,107,130,4,59,107"
-                href="https://developer.mozilla.org/docs/Web/JavaScript"
-                target="_blank" alt="JavaScript" />
-            </map>
-            <img id="distributorClick"usemap="#infographic" src={require('../images/distro-map.png')} alt="distro-map" />
+            
+            {/* https://www.image-map.net/ */}
+            <img id='distributorClick'src={require('../images/distro-map-900px.png')} alt="distro-map" usemap="#image-map"></img>
+
+            <map name="image-map">
+              <area target="_blank" alt="Bill's Distributing Alaska" title="Bill's Distributing Alaska" href="https://www.facebook.com/Bills-Distributing-151836918698922/" coords="143,56,283,68,283,198,117,251" shape="poly"/>
+              <area target="_blank" alt="Point Blank Distributing Oregon" title="Point Blank Distributing Oregon" href="http://pointblankdistributing.com/" coords="458,228,605,266,570,382,411,349" shape="poly"/>
+              <area target="_blank" alt="Idaho Wine Merchant Idaho" title="Idaho Wine Merchant Idaho" href="https://idahowinemerchant.com" coords="651,178,610,386,726,408,733,340,684,289" shape="poly"/>
+              <area target="_blank" alt="Olympic Eagle Washington (Pierce, Thurston and Peninsula)" title="Olympic Eagle Washington (Pierce, Thurston and Peninsula)" href="https://www.olympiceagle.com/" coords="467,132,505,155,510,167,526,175,515,191,471,177" shape="poly"/>
+              <area target="_blank" alt="Orcas Distributing Washington (King and Snohomish)" title="Orcas Distributing Washington (King and Snohomish)" href="http://www.orcasdistributing.com/" coords="517,147,517,161,533,168,543,152" shape="poly"/>
+              <area target="_blank" alt="Dickerson Distributors Washington (Skagit and Whatcom)" title="Dickerson Distributors Washington (Skagit and Whatcom)" href="https://www.dickersondistributors.com/" coords="516,119,517,138,544,146,553,126" shape="poly"/>
+          </map>
         </div>
         
       </div>
