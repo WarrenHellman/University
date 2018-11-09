@@ -10,11 +10,12 @@ class Distribution extends Component {
       <div className="Distribution">
         <div class="availability-header-container">
             <h1 class="availability-header">Our Distribution</h1>
+            <h3>We are committed to serving the Pacific Northwest. Please hover over your area to find the correct distributor!</h3>
         </div>
         <hr></hr>
         <div class="availability-map">
             {/* <!-- https://mapchart.net/usa.html --> */}
-            <img src={require('../images/distro-map.png')} alt="distro-map"></img>
+            {/* <img src={require('../images/distro-map.png')} alt="distro-map"></img> */}
             
             {/* https://www.image-map.net/ */}
             <img id='distributorClick'src={require('../images/distro-map-900px.png')} alt="distro-map" usemap="#image-map"></img>

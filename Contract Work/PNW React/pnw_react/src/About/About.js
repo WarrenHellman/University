@@ -79,7 +79,7 @@ class About extends Component {
 
   render() {
     return (
-      <div className="About">
+      <div id="about" className="About">
         <div className="about-tabs">
           <button id="story-tab"  className="underline-tab" onClick={this.story}>Our Story</button>
           <button id="brewing-tab" onClick={this.brewing}>Our Brewing</button>
@@ -90,7 +90,7 @@ class About extends Component {
         </div> 
         <hr></hr>
         <div>
-          <div id="about" className="about-text">
+          <div className="about-text">
             <p id="about-story">
                 We canned our first beer in 2016 with a mission: To create a beer that does more than just taste great, but also supports the Pacific Northwest and its amazing outdoors. We know there are other options out there but we are proud to be independent and locally owned.  Without any corporate backing, we have to start small but appreciate sharing our beer with you.
                 <br></br>
