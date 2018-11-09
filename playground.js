@@ -659,23 +659,53 @@ function kthLast(k, head){
 let idNum = 1
 let count ={}
 
-function clicked(id) {
-    if (!count[id]){
-        count[id]=0;
+// function clicked(id) {
+//     if (!count[id]){
+//         count[id]=0;
+//     }
+//     count[id]+=1;
+//     let curButton = document.getElementById(id);
+//     curButton.innerText = 'I have been clicked '+count[id]+' times';
+//     curButton.style= 'color:orange;'
+
+
+//     let node = document.createElement('button')
+//     node.setAttribute('type', 'button');
+//     node.setAttribute('id', 'button'+idNum)
+//     node.setAttribute('onclick','clicked(this.id)')
+//     idNum ++;
+
+//     let textNode = document.createTextNode('I have been clicked 0 times')
+//     node.appendChild(textNode);
+//     document.getElementById('container').appendChild(node);
+// }
+
+// Merge Sorted Arrays
+
+function arrayMerge(arr1, arr2) {
+    let mergeIndex=0;
+    let arrOneIndex=0;
+    let arrTwoIndex=0;
+    let timer = arr1.length + arr2.length;
+    let mergeArr = [];
+    while (timer>0) {
+        if (arr1[arrOneIndex]<=arr2[arrTwoIndex]||arrTwoIndex===(arr2.length)) {
+            mergeArr[mergeIndex] = arr1[arrOneIndex];
+            mergeIndex++;
+            arrOneIndex++;
+        }
+        else if (arr2[arrTwoIndex]<arr1[arrOneIndex]||arrOneIndex===(arr1.length)){
+            mergeArr[mergeIndex] = arr2[arrTwoIndex];
+            mergeIndex++;
+            arrTwoIndex++;
+        }
+        timer--;
     }
-    count[id]+=1;
-    let curButton = document.getElementById(id);
-    curButton.innerText = 'I have been clicked '+count[id]+' times';
-    curButton.style= 'color:orange;'
+    return mergeArr;
 
-
-    let node = document.createElement('button')
-    node.setAttribute('type', 'button');
-    node.setAttribute('id', 'button'+idNum)
-    node.setAttribute('onclick','clicked(this.id)')
-    idNum ++;
-
-    let textNode = document.createTextNode('I have been clicked 0 times')
-    node.appendChild(textNode);
-    document.getElementById('container').appendChild(node);
 }
+
+let arrMerge1 = [1,3,5,7];
+let arrMerge2 = [2,4,6,8];
+
+console.log(arrayMerge(arrMerge1, arrMerge2));
