@@ -63,5 +63,91 @@ function reverseArr(arr){
 let input=['W','a','r','e','n']
 // console.log(reverseArr(input));
 
+// Reverse Array of words in place
 
+function reverseArray(array){
+  let start = 0;
+  for (let i=0; i<array.length; i++){
+    if (array[i+1]===" "||(i+1)===array.length){
+      let end=i;
+      let dif = end-start;
+      let runTime = Math.floor(dif/2)
+      for (let j=0; j<=runTime; j++){
+        let temp = array[start];
+        array[start]=array[end];
+        array[end]=temp;
+        start++;
+        end--;
+      }
+      start=i+2;
+    }
+  }
+  reverseArr(array);
+  return array.join("");
+}
 
+const message = [ 'c', 'a', 'k', 'e', ' ','p', 'o', 'u', 'n', 'd', ' ','s', 't', 'e', 'a', 'l'];
+
+console.log(reverseArray(message));
+
+// Merge Sorted Arrays
+
+function arrayMerge(arr1, arr2) {
+  let mergeIndex=0;
+  let arrOneIndex=0;
+  let arrTwoIndex=0;
+  let timer = arr1.length + arr2.length;
+  let mergeArr = [];
+  while (timer>0) {
+      if (arr1[arrOneIndex]<=arr2[arrTwoIndex]||arrTwoIndex===(arr2.length)) {
+          mergeArr[mergeIndex] = arr1[arrOneIndex];
+          mergeIndex++;
+          arrOneIndex++;
+      }
+      else if (arr2[arrTwoIndex]<arr1[arrOneIndex]||arrOneIndex===(arr1.length)){
+          mergeArr[mergeIndex] = arr2[arrTwoIndex];
+          mergeIndex++;
+          arrTwoIndex++;
+      }
+      timer--;
+  }
+  return mergeArr;
+
+}
+
+let arrMerge1 = [1,3,5,7];
+let arrMerge2 = [2,4,6,8];
+
+console.log(arrayMerge(arrMerge1, arrMerge2));
+
+let deck = [1,7,2,6,3,5,8,4]
+let half1 = [1, 2, 3, 4]
+let half2 = [5, 6, 7, 8]
+
+function didItRiffle(deck, half1, half2){
+  // The constant splicing adds a lot more time complexity. It's better to keep track of the index for each half as a variable and pass that in the function. 
+  if (deck[0]===half1[0]){
+      deck.splice(0,1);
+      half1.splice(0,1)
+      if (deck.length ===0){
+          console.log('no more cards in deck, 1 riffle')
+          return true;
+      }
+      return didItRiffle(deck, half1, half2)
+  }
+  else if (deck[0]===half2[0]){
+      deck.splice(0,1);
+      half2.splice(0,1)
+      if (deck.length ===0){
+          console.log('no more cards in deck, 1 riffle')
+          return true;
+      }
+      return didItRiffle(deck, half1, half2)
+  }
+  else {
+      console.log('more than a single riffle detected')
+      return false
+  };
+}
+
+// console.log(didItRiffle(deck, half1, half2))
