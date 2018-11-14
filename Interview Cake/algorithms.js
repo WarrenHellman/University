@@ -1,3 +1,5 @@
+// Merged Meeting Algorithm
+
 function mergeRanges(meetings) {
   if (meetings.length===0){
     return 'No meetings in range';
@@ -44,4 +46,22 @@ let schedules =  [
   { startTime: 9,  endTime: 10 },
 ]; 
 
-console.log(mergeRanges(schedules))
+// console.log(mergeRanges(schedules))
+
+// Reverse a string in place (using an array) algorithm
+
+function reverseArr(arr){
+  let midPoint = Math.floor(arr.length/2)
+  for (let i=0; i<midPoint; i++){
+    let temp= arr[i];
+    arr[i]= arr[arr.length-1-i];
+    arr[arr.length-1-i]=temp;
+  }
+  return arr;
+}
+
+let input=['W','a','r','e','n']
+// console.log(reverseArr(input));
+
+
+
