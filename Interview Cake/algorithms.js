@@ -88,7 +88,7 @@ function reverseArray(array){
 
 const message = [ 'c', 'a', 'k', 'e', ' ','p', 'o', 'u', 'n', 'd', ' ','s', 't', 'e', 'a', 'l'];
 
-console.log(reverseArray(message));
+// console.log(reverseArray(message));
 
 // Merge Sorted Arrays
 
@@ -118,7 +118,7 @@ function arrayMerge(arr1, arr2) {
 let arrMerge1 = [1,3,5,7];
 let arrMerge2 = [2,4,6,8];
 
-console.log(arrayMerge(arrMerge1, arrMerge2));
+// console.log(arrayMerge(arrMerge1, arrMerge2));
 
 let deck = [1,7,2,6,3,5,8,4]
 let half1 = [1, 2, 3, 4]
@@ -151,3 +151,30 @@ function didItRiffle(deck, half1, half2){
 }
 
 // console.log(didItRiffle(deck, half1, half2))
+
+
+
+// Two Movies on a flight- write a function that can determine if two movies total runtime equals that of a the flight
+
+function twoMovieOneFlight(flightTime, movieRunTimeArray){
+  let movieNum=1;
+  let maps = {};
+  for(let i=0; i<movieRunTimeArray.length; i++) {
+    let key = 'movie'+movieNum;
+    maps[key]=movieRunTimeArray[i];
+    movieNum++;
+  }
+  for(let j=0; j<movieRunTimeArray.length; j++){
+    for (map in maps){
+      if (movieRunTimeArray[j]+maps[map]===flightTime){
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+const movies = [90, 120, 110, 69, 140];
+flightTime = 200;
+
+console.log(twoMovieOneFlight(flightTime, movies))
