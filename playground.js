@@ -650,3 +650,28 @@ let count ={}
 //     document.getElementById('container').appendChild(node);
 // }
 
+function reverseSentenceWord(str) {
+    let arr = str.split(" ");
+    for (let i=0; i<arr.length; i++){
+        arr[i] = reverseWord(arr[i])
+    }
+    string = arr.join(" ")
+    return string;
+}
+let word ="Please spin me around";
+
+function reverseWord(word){
+    let wordArr=word.split("")
+    let runtime = Math.floor(wordArr.length/2);
+    for (let i=0; i<runtime; i++){
+        let temp = wordArr[i];
+        wordArr[i]=wordArr[wordArr.length-1-i];
+        wordArr[wordArr.length-1-i]=temp;
+    }
+    let reverse = wordArr.join("")
+    return reverse;
+}
+
+
+// console.log(reverseWord(newWord))
+console.log(reverseSentenceWord(word));
