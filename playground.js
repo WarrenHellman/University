@@ -674,4 +674,4 @@ function reverseWord(word){
 
 
 // console.log(reverseWord(newWord))
-console.log(reverseSentenceWord(word));
+// console.log(reverseSentenceWord(word));
