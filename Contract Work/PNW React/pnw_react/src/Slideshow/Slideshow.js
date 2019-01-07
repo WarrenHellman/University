@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import { render } from 'react-dom';
-import Carousel from 'react-image-carousel';
+
 import './Slideshow.css';
 
 
@@ -14,11 +13,6 @@ class Slideshow extends Component {
     return(
       <div classname='Slideshow'>
         <div className="my-carousel">
-            <Carousel 
-              images={images} 
-              thumb={true}
-              loop={true}
-              autoplay={3000}/>
         </div>
       </div>
     )
